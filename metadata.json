@@ -1,0 +1,8 @@
+{
+  "name": "CBSA - PT. Chantika Bahari Sejahtera Abadi",
+  "description": "Maritime & Logistics Solution website for PT. Chantika Bahari Sejahtera Abadi (CBSA) offering ship agency, port services, and maritime logistics in Batam, Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
