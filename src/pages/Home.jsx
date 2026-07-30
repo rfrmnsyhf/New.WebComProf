@@ -14,7 +14,6 @@ import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
 import TestimonialsSection from "@/sections/Testimonials/Testimonials";
 import PortfolioSection from "@/sections/Portfolio/Portfolio";
-import FounderStatementSection from "@/sections/FounderStatement/FounderStatement";
 import CertificationsSection from "@/sections/Certifications/Certifications";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -364,7 +363,6 @@ const Home = () => {
       <IndustriesSection />
       <TestimonialsSection />
       <PortfolioSection />
-      {/* <FounderStatementSection /> */}
       <CertificationsSection />
 
       {/* Bottom CTA Section */}
