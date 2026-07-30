@@ -15,8 +15,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: "WhatsApp / Hotline",
-      value: `+${company.phone || "628123456789"}`,
-      href: `https://wa.me/${company.phoneWhatsApp || company.phone}?text=Halo%20CBSA,%20saya%20ingin%20berkonsultasi`,
+      value: `+${company.phoneWhatsApp2 || "6282171477799"}`,
+      href: `https://wa.me/${company.phoneWhatsApp2 || company.phone}?text=Halo%20CBSA,%20saya%20ingin%20berkonsultasi`,
       external: true,
       subtext: language === "id" ? "Respon cepat 24/7" : "Fast response 24/7",
     },
@@ -32,7 +32,7 @@ const Contact = () => {
       icon: MapPin,
       label: language === "id" ? "Alamat Kantor Utama" : "Head Office Address",
       value: company.address || "Jalan Duyung, Sungai Jodoh, Batu Ampar, Batam",
-      href: "https://maps.google.com/?q=Jalan+Duyung+Sungai+Jodoh+Batu+Ampar+Batam",
+      href: "https://maps.app.goo.gl/smhUJhroBtSYYabU6",
       external: true,
       subtext: "Batu Ampar, Kepulauan Riau",
     },
@@ -49,7 +49,7 @@ const Contact = () => {
     const message = form.elements.message.value;
 
     const body = `Halo CBSA,\n\nNama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`;
-    const mailtoUrl = `mailto:${company.email || "info@cbsa.co.id"}?subject=${encodeURIComponent(
+    const mailtoUrl = `mailto:${company.email2 || "alvianprajatama@gmail.com"}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 
@@ -318,14 +318,14 @@ const Contact = () => {
                 </span>
               </div>
               <iframe
-                src="https://maps.google.com/maps?q=Jalan%20Duyung%20Sungai%20Jodoh%20Batu%20Ampar%20Batam&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0493!2d103.998546!3d1.156398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDknMjMuMCJOIDEwM8KwNTknNTQuOCJF!5e0!3m2!1sid!2sid!4v1785422480956"
                 width="100%"
                 height="240"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Lokasi CBSA - Batu Ampar, Batam"
+                title="Lokasi CBSA"
               />
             </motion.div>
           </motion.div>

@@ -203,7 +203,7 @@ const FAQSection = () => {
                 </p>
 
                 <a
-                  href={`https://wa.me/${company.phoneWhatsApp || company.phone}?text=Halo%20CBSA,%20saya%20ingin%20bertanya%20mengenai%20layanan%20keagenan`}
+                  href={`https://wa.me/${company.phoneWhatsApp2 || company.phone}?text=Halo%20CBSA,%20saya%20ingin%20bertanya%20mengenai%20layanan%20keagenan`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block w-full sm:w-auto"

@@ -93,12 +93,6 @@ const Services = () => {
                 </p>
               </div>
 
-              {/* Card Footer Link */}
-              <div className="mt-6 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-secondary opacity-80 group-hover:opacity-100 transition-opacity">
-                <span>Detail</span>
-                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-2" />
-              </div>
-
               {/* Bottom Gradient Accent Bar (SUDAH DIBERSIHKAN KE bg-linear-to-r) */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-secondary to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </motion.div>

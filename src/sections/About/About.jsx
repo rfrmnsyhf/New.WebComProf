@@ -106,7 +106,7 @@ const About = () => {
                 )}
               </h2>
 
-              <div className="space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
+              <div className="space-y-4 text-base leading-relaxed text-slate-600 md:text-lg text-justify">
                 <p>
                   <strong className="font-semibold text-primary">{company.shortName}</strong>{" "}
                   {language === "id"
@@ -125,53 +125,6 @@ const About = () => {
                     ? "Dengan mengedepankan integritas, keselamatan kerja, serta pelayanan yang cepat dan dapat diandalkan, CBSA terus membangun hubungan kemitraan jangka panjang sebagai penyedia layanan keagenan kapal yang dipercaya oleh klien nasional maupun internasional."
                     : "Upholding integrity, occupational safety, and prompt service, CBSA builds long-term partnerships trusted by national and international shipping clients."}
                 </p>
-              </div>
-            </motion.div>
-
-            {/* Vision & Mission Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-10 space-y-5"
-            >
-              {/* Vision Card */}
-              <div className="rounded-2xl border border-slate-200/80 border-l-4 border-l-secondary bg-slate-50/50 p-6 shadow-xs">
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/10 text-secondary">
-                    <Target className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-lg font-bold text-primary">
-                    {language === "id" ? "Visi Perusahaan" : "Our Vision"}
-                  </h3>
-                </div>
-                <p className="text-sm leading-relaxed font-medium text-slate-600">
-                  {language === "id"
-                    ? "Menjadi perusahaan jasa keagenan kapal dan pelabuhan independen nasional berkelas dunia yang selalu memberikan pelayanan terbaik sesuai standar kualitas global."
-                    : "To be a world-class national independent port & shipping services company that always provides the best services matching global standards of quality."}
-                </p>
-              </div>
-
-              {/* Mission Card */}
-              <div className="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 shadow-xs">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <Eye className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-lg font-bold text-primary">
-                    {language === "id" ? "Misi Perusahaan" : "Our Mission"}
-                  </h3>
-                </div>
-
-                <ul className="space-y-3">
-                  {missionList.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 text-xs md:text-sm text-slate-600 leading-relaxed">
-                      <CheckCircle2 className="h-4 w-4 shrink-0 text-secondary mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </motion.div>
           </div>

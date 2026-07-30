@@ -119,7 +119,7 @@ const Philosophy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mb-8 text-base leading-relaxed text-slate-600 md:text-lg"
+              className="mb-8 text-base leading-relaxed text-slate-600 md:text-lg text-justify"
             >
               {language === "id"
                 ? "Setiap langkah operasional kami didasari oleh filosofi perusahaan yang kuat. Kami berkomitmen menjaga standar kualitas global demi kelancaran setiap pelayaran kapal Anda."

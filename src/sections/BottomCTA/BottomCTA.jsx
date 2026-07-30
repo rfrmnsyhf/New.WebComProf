@@ -8,8 +8,8 @@ import { useLanguage } from "@/context/LanguageContext";
 const BottomCTA = () => {
   const { t, language } = useLanguage();
 
-  const whatsappNum = company?.phoneWhatsApp || company?.phone || "628123456789";
-  const emailAddr = company?.email || "info@cbsa.co.id";
+  const whatsappNum = company?.phoneWhatsApp2 || company?.phone || "6282171477799";
+  const emailAddr = company?.email2 || "alvianprajatama@gmail.com";
 
   return (
     <section className="relative overflow-hidden bg-primary py-20 lg:py-28 text-white">
@@ -18,7 +18,7 @@ const BottomCTA = () => {
       <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none opacity-50" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-size:32px_32px pointer-events-none opacity-50" />
 
       <ContainerComponent className="relative z-10">
         <div className="mx-auto max-w-4xl text-center">
@@ -97,7 +97,7 @@ const BottomCTA = () => {
                 className="w-full sm:w-auto gap-2.5 rounded-xl border-white/20 bg-white/10 px-8 py-6 text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 hover:border-white/40 active:scale-95"
               >
                 <Mail className="h-5 w-5 text-slate-300" />
-                <span>{language === "id" ? "Kirim Permintaan Resmi" : "Send Official Inquiry"}</span>
+                <span>{language === "id" ? "Kirim Email" : "Send Email"}</span>
               </Button>
             </a>
           </motion.div>

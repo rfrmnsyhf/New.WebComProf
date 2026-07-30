@@ -11,6 +11,7 @@ const Counter = ({ target, suffix, inView }) => {
     let start = 0;
     let rafId;
     const duration = 2000;
+
     const step = (timestamp) => {
       if (!start) start = timestamp;
       const progress = Math.min((timestamp - start) / duration, 1);
@@ -18,6 +19,7 @@ const Counter = ({ target, suffix, inView }) => {
       setCount(Math.floor(eased * target));
       if (progress < 1) rafId = requestAnimationFrame(step);
     };
+
     rafId = requestAnimationFrame(step);
     return () => cancelAnimationFrame(rafId);
   }, [inView, target]);
@@ -32,7 +34,8 @@ const Counter = ({ target, suffix, inView }) => {
 
 const Stats = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20%" });
+  // Diubah ke amount: 0.3 agar angka mulai running pas komponen 30% masuk layar
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
   const { language } = useLanguage();
 
   const stats = [
@@ -47,11 +50,6 @@ const Stats = () => {
       label: language === "id" ? "Jenis Kapal & Kargo" : "Vessel & Cargo Types",
     },
     {
-      value: 7,
-      suffix: "",
-      label: language === "id" ? "Mitra Utama" : "Key Partners",
-    },
-    {
       value: 24,
       suffix: "/7",
       label: language === "id" ? "Siap Melayani" : "24/7 Operations",
@@ -61,13 +59,16 @@ const Stats = () => {
   return (
     <section ref={ref} className="bg-primary py-20">
       <Container>
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        {/*
+          Disesuaikan grid-nya jadi md:grid-cols-3 agar 3 item terbagi sempurna 
+          dan sejajar di tengah layar desktop!
+        */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-3">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
               className="text-center"
             >

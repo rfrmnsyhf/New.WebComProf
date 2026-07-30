@@ -2,7 +2,6 @@ import PageHero from "@/components/common/PageHero";
 import ServicesSection from "@/sections/Services/Services";
 import CorePillarsSection from "@/sections/Services/CorePillars";
 import RangeOfServicesSection from "@/sections/RangeOfServices/RangeOfServices";
-import MidCTA from "@/sections/Services/MidCTA";
 import OperationalServicesSection from "@/sections/OperationalServices/OperationalServices";
 import ServiceTestimonials from "@/sections/Services/ServiceTestimonials";
 import SharingLocalKnowledgeSection from "@/sections/LocalKnowledge/SharingLocalKnowledge";
@@ -26,7 +25,6 @@ const Services = () => {
       <CorePillarsSection />
       <ServicesSection />
       <RangeOfServicesSection />
-      <MidCTA />
       <OperationalServicesSection />
       <ServiceTestimonials />
       <SharingLocalKnowledgeSection />

@@ -69,17 +69,37 @@ const Footer = () => {
             </p>
 
             <address className="mb-6 not-italic space-y-2 text-sm text-slate-400">
-              <p>
+              <p className="flex items-center gap-2">
+                <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                  Alvin Prajatama :
+                </span>
+                <a
+                  href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-200 hover:text-accent"
+                >
+                  +{company.phoneWhatsApp2}
+                </a>
+              </p>
+
+              <p className="flex items-center gap-2">
+                <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                  Dedi Hermawan. L :
+                </span>
                 <a
                   href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors duration-200 hover:text-accent"
                 >
-                  +{company.phone}
+                  +{company.phoneWhatsApp}
                 </a>
               </p>
-              <p>
+              <p className="flex items-center gap-2">
+                <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                  Email :
+                </span>
                 <a
                   href={`mailto:${company.email}`}
                   className="transition-colors duration-200 hover:text-accent"
@@ -87,23 +107,20 @@ const Footer = () => {
                   {company.email}
                 </a>
               </p>
+
+              <p className="flex items-center gap-2">
+                <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                  Email :
+                </span>
+                <a
+                  href={`mailto:${company.email2}`}
+                  className="transition-colors duration-200 hover:text-accent"
+                >
+                  {company.email2}
+                </a>
+              </p>
               <p className="leading-relaxed">{company.address}</p>
             </address>
-
-            <div className="flex gap-2.5">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Navigasi */}
@@ -152,7 +169,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
+                  href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
@@ -162,7 +179,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href={`mailto:${company.email}`}
+                  href={`mailto:${company.email2}`}
                   className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                 >
                   {t?.common?.sendEmail || "Kirim Email"}
@@ -170,7 +187,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Bar */}

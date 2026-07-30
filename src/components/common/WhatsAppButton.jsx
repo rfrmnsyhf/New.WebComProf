@@ -5,7 +5,7 @@ import { company } from "@/constants/company";
 const WhatsAppButton = () => {
   return (
     <motion.a
-      href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA%2C%20saya%20ingin%20konsultasi%20tentang%20layanan%20maritim.`}
+      href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA%2C%20saya%20ingin%20konsultasi%20tentang%20layanan%20maritim.`}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}

@@ -10,7 +10,6 @@ import svc2 from "@/assets/images/home6.jpg";
 import svc3 from "@/assets/images/home7.jpg";
 import svc4 from "@/assets/images/offshore.jpg";
 import svc5 from "@/assets/images/tug-barge.jpg";
-import ClientLogosSection from "@/sections/ClientLogos/ClientLogos";
 import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
 import TestimonialsSection from "@/sections/Testimonials/Testimonials";
@@ -58,7 +57,7 @@ const SectionEyebrow = ({ children, motionProps = {}, className = "" }) => (
 const Home = () => {
   const { t, language } = useLanguage();
   const { fadeUp, fadeX, reduce } = useMotionVariants();
-  const waLink = buildWhatsAppLink(company.phoneWhatsApp);
+  const waLink = buildWhatsAppLink(company.phoneWhatsApp2);
 
   // Modularize static translated values
   const values = [
@@ -118,7 +117,7 @@ const Home = () => {
 
         {/* Multi-Layered Overlay for readability */}
         <div className="absolute inset-0 bg-slate-950/65" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-primary/30" />
+        <div className="absolute inset-0 bg-linear-to-t from-primary via-transparent to-primary/30" />
 
         <Container className="relative z-10 py-32 lg:py-40">
           <motion.div
@@ -172,11 +171,8 @@ const Home = () => {
           </motion.div>
         </Container>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/40 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none" />
       </section>
-
-      {/* Client Logos Section */}
-      <ClientLogosSection />
 
       {/* Value Proposition */}
       <section className="bg-white py-20 lg:py-28">
@@ -207,7 +203,7 @@ const Home = () => {
             {/* CTA Box Side */}
             <motion.div
               {...fadeUp(0.3)}
-              className="lg:col-span-4 relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-slate-900 to-primary p-8 text-white shadow-xl border border-slate-800"
+              className="lg:col-span-4 relative flex flex-col justify-between overflow-hidden rounded-2xl bg-linear-to-br from-primary via-slate-900 to-primary p-8 text-white shadow-xl border border-slate-800"
             >
               <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/20 blur-2xl" />
               <div>
@@ -252,7 +248,7 @@ const Home = () => {
 
               {/* Enhanced Experience Badge */}
               <div className="absolute -bottom-6 -right-2 sm:-right-4 rounded-2xl border border-white/20 bg-cta/95 p-5 text-white shadow-2xl backdrop-blur-md md:right-6">
-                <span className="block text-3xl font-extrabold leading-none tracking-tight md:text-4xl">25+</span>
+                <span className="block text-3xl font-extrabold leading-none tracking-tight md:text-4xl">6+</span>
                 <span className="text-xs font-semibold uppercase tracking-wider text-slate-100">
                   {language === "id" ? "Tahun Pengalaman" : "Years of Experience"}
                 </span>
@@ -368,13 +364,13 @@ const Home = () => {
       <IndustriesSection />
       <TestimonialsSection />
       <PortfolioSection />
-      <FounderStatementSection />
+      {/* <FounderStatementSection /> */}
       <CertificationsSection />
 
       {/* Bottom CTA Section */}
       <section className="relative overflow-hidden bg-primary py-20 lg:py-28 text-white">
         {/* Glow Accent Circles - Fixed Tailwind sizing */}
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-3xl" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-500px w-500px -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-3xl" />
 
         <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -435,7 +431,7 @@ const Home = () => {
             </a>
 
             <a 
-              href={`mailto:${company.email || "info@cbsa.co.id"}`} 
+              href={`mailto:${company.email2 || "alvianprajatama@gmail.com"}`} 
               aria-label="Kirim Inquiry via Email"
               className="w-full sm:w-auto"
             >
@@ -443,7 +439,7 @@ const Home = () => {
                 variant="outline"
                 className="w-full sm:w-auto rounded-full border-white/20 bg-white/5 px-7 py-6 text-base font-medium text-white backdrop-blur-xs transition-all duration-300 hover:bg-white/15 hover:border-white/40 hover:-translate-y-0.5"
               >
-                {language === "id" ? "Kirim Email Inquiry" : "Send Formal Inquiry"}
+                {language === "id" ? "Kirim Email" : "SendEmail"}
               </Button>
             </a>
           </motion.div>

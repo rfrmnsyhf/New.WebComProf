@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Ship, LifeBuoy, Truck, Check, ArrowUpRight } from "lucide-react";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
+import { Link } from "react-router-dom";
 
 const pillars = [
   {
@@ -209,13 +210,13 @@ const CorePillars = () => {
 
               {/* Bottom Subtle Bar */}
               <div className="mt-8 pt-4">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary group-hover:text-secondary transition-colors"
                 >
                   {language === "id" ? "Pelajari Lebih Lanjut" : "Learn More"}
                   <span className="transition-transform group-hover:translate-x-1">→</span>
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

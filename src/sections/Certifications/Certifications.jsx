@@ -23,17 +23,10 @@ const CERTIFICATIONS_RAW = [
     },
   },
   {
-    title: "SIUPAL",
+    title: "SIUPKK",
     description: {
-      id: "Surat Izin Usaha Perusahaan Keagenan Kapal resmi.",
-      en: "Official Shipping Agency Operating License in Indonesia.",
-    },
-  },
-  {
-    title: "INSA Member",
-    description: {
-      id: "Anggota resmi Indonesian National Shipowners' Association.",
-      en: "Official member of Indonesian National Shipowners' Association.",
+      id: "Surat Izin Usaha Perusahaan Keagenan Kapal.",
+      en: "Shipping Agency Operating License in Indonesia.",
     },
   },
   {

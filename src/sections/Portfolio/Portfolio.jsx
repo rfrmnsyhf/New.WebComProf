@@ -113,9 +113,6 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                  <span className="inline-block rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm">
-                    {language === "id" ? "Lihat Detail" : "View Details"}
-                  </span>
                 </div>
               </div>
               <div className="p-6">
