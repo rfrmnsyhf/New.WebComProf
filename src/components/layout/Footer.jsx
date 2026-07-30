@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaChevronDown } from "react-icons/fa";
 import Container from "@/components/layout/Container";
 import { company } from "@/constants/company";
 import logo from "@/assets/images/LOGO.png";
@@ -9,79 +10,94 @@ const socialLinks = [
   { icon: FaInstagram, href: "https://instagram.com/", label: "Instagram" },
   { icon: FaFacebookF, href: "https://facebook.com/", label: "Facebook" },
   { icon: FaLinkedinIn, href: "https://linkedin.com/", label: "LinkedIn" },
-  { icon: FaYoutube, href: "https://youtube.com/", label: "YouTube" },
 ];
 
 const Footer = () => {
   const { t } = useLanguage();
 
+  // State untuk melacak indeks FAQ mana yang sedang terbuka (null = semua tertutup)
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    // Jika item yang diklik sudah terbuka, tutup (set null). Jika belum, buka item tersebut.
+    setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   const servicesList = [
-    t.services.s1Title,
-    t.services.s2Title,
-    t.services.s3Title,
-    t.services.s4Title,
-    t.services.s5Title,
-    t.services.s6Title,
-  ];
+    t?.services?.s1Title,
+    t?.services?.s2Title,
+    t?.services?.s3Title,
+    t?.services?.s4Title,
+    t?.services?.s5Title,
+    t?.services?.s6Title,
+  ].filter(Boolean);
 
   const faqs = [
-    { question: t.faq.q1, answer: t.faq.a1 },
-    { question: t.faq.q2, answer: t.faq.a2 },
-    { question: t.faq.q3, answer: t.faq.a3 },
+    { question: t?.faq?.q1, answer: t?.faq?.a1 },
+    { question: t?.faq?.q2, answer: t?.faq?.a2 },
+    { question: t?.faq?.q3, answer: t?.faq?.a3 },
   ];
 
   const navigation = [
-    { name: t.nav.home, href: "/" },
-    { name: t.nav.about, href: "/about" },
-    { name: t.nav.services, href: "/services" },
-    { name: t.nav.industries, href: "/industries" },
-    { name: t.nav.contact, href: "/contact" },
+    { name: t?.nav?.home || "Beranda", href: "/" },
+    { name: t?.nav?.about || "Tentang", href: "/about" },
+    { name: t?.nav?.services || "Layanan", href: "/services" },
+    { name: t?.nav?.industries || "Industri", href: "/industries" },
+    { name: t?.nav?.contact || "Kontak", href: "/contact" },
   ];
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary text-white" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
+      
       <Container className="py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-6">
+        {/* Layout Grid */}
+        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
 
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="mb-4 inline-block">
-              <img src={logo} alt="CBSA Logo" className="h-14 w-auto brightness-0 invert" />
+          {/* Brand & Detail Kontak */}
+          <div className="sm:col-span-2 lg:col-span-2">
+            <Link to="/" className="mb-4 inline-block transition-opacity hover:opacity-80">
+              <img
+                src={logo}
+                alt={`${company.name} Logo`}
+                className="h-12 w-auto brightness-0 invert"
+              />
             </Link>
-            <p className="mb-4 max-w-sm text-sm leading-relaxed text-slate-400">
-              {company.slogan}. {t.hero.subtitle}
+
+            <p className="mb-5 max-w-sm text-sm leading-relaxed text-slate-400">
+              {company.slogan}. {t?.hero?.subtitle}
             </p>
-            <ul className="mb-6 space-y-2 text-sm text-slate-400">
-              <li>
+
+            <address className="mb-6 not-italic space-y-2 text-sm text-slate-400">
+              <p>
                 <a
                   href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors duration-200 hover:text-accent"
                 >
                   +{company.phone}
                 </a>
-              </li>
-              <li>
+              </p>
+              <p>
                 <a
                   href={`mailto:${company.email}`}
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors duration-200 hover:text-accent"
                 >
                   {company.email}
                 </a>
-              </li>
-              <li className="leading-relaxed">{company.address}</li>
-            </ul>
+              </p>
+              <p className="leading-relaxed">{company.address}</p>
+            </address>
 
-            {/* Social Media */}
-            <div className="flex gap-3">
+            <div className="flex gap-2.5">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-slate-400 transition-all hover:bg-secondary/20 hover:text-accent"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
                   aria-label={social.label}
                 >
                   <social.icon className="h-4 w-4" />
@@ -90,36 +106,36 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-              Navigation
-            </h4>
-            <ul className="space-y-3">
+          {/* Navigasi */}
+          <nav aria-label="Footer Navigasi">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+              Navigasi
+            </h3>
+            <ul className="space-y-2.5">
               {navigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     to={item.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-accent"
+                    className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Services */}
+          {/* Layanan */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-              {t.nav.services}
-            </h4>
-            <ul className="space-y-3">
-              {servicesList.map((service) => (
-                <li key={service}>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+              {t?.nav?.services || "Layanan"}
+            </h3>
+            <ul className="space-y-2.5">
+              {servicesList.map((service, index) => (
+                <li key={index}>
                   <Link
                     to="/services"
-                    className="text-sm text-slate-400 transition-colors hover:text-accent"
+                    className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                   >
                     {service}
                   </Link>
@@ -128,47 +144,75 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* FAQ */}
+          {/* FAQ Accordion - Single Expand */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               FAQ
-            </h4>
-            <ul className="space-y-4">
-              {faqs.map((faq) => (
-                <li key={faq.question}>
-                  <p className="mb-1 text-sm font-medium text-white">
-                    {faq.question}
-                  </p>
-                  <p className="text-xs leading-relaxed text-slate-500">
-                    {faq.answer}
-                  </p>
-                </li>
-              ))}
-            </ul>
+            </h3>
+            <div className="space-y-2.5">
+              {faqs.map((faq, index) => {
+                const isOpen = openFaqIndex === index;
+                return (
+                  <div
+                    key={index}
+                    className="border-b border-white/10 pb-2.5 transition-colors duration-200"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(index)}
+                      className="flex w-full items-center justify-between gap-2 text-left text-sm font-medium text-slate-200 transition-colors duration-200 hover:text-accent"
+                      aria-expanded={isOpen}
+                    >
+                      <span>{faq.question}</span>
+                      <FaChevronDown
+                        className={`h-3 w-3 shrink-0 text-slate-400 transition-transform duration-300 ${
+                          isOpen ? "rotate-180 text-accent" : ""
+                        }`}
+                      />
+                    </button>
+                    
+                    {/* Konten Jawaban dengan Smooth Expand */}
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100 pt-2"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <p className="text-xs leading-relaxed text-slate-400">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Bantuan Cepat */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-              {t.common.quickHelp}
-            </h4>
-            <ul className="space-y-3">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+              {t?.common?.quickHelp || "Bantuan Cepat"}
+            </h3>
+            <ul className="space-y-2.5">
               <li>
                 <a
                   href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-400 transition-colors hover:text-accent"
+                  className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                 >
-                  {t.common.chatWhatsapp}
+                  {t?.common?.chatWhatsapp || "Chat WhatsApp"}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${company.email}`}
-                  className="text-sm text-slate-400 transition-colors hover:text-accent"
+                  className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                 >
-                  {t.common.sendEmail}
+                  {t?.common?.sendEmail || "Kirim Email"}
                 </a>
               </li>
             </ul>
@@ -178,15 +222,15 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} {company.name}. {t.common.allRightsReserved}
+          <p className="text-xs sm:text-sm text-slate-400">
+            &copy; {new Date().getFullYear()} {company.name}. {t?.common?.allRightsReserved || "All Rights Reserved."}
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-accent">
-              {t.common.privacyPolicy}
+          <div className="flex gap-6 text-xs sm:text-sm text-slate-400">
+            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors duration-200 hover:text-accent">
+              {t?.common?.privacyPolicy || "Privacy Policy"}
             </a>
             <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-accent">
-              {t.common.termsConditions}
+              {t?.common?.termsConditions || "Terms & Conditions"}
             </a>
           </div>
         </div>

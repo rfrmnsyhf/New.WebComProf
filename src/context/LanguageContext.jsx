@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useMemo, useCallback } from "react";
 
 const LanguageContext = createContext();
 
@@ -316,16 +316,24 @@ export const LanguageProvider = ({ children }) => {
     document.documentElement.lang = language;
   }, [language]);
 
-  const toggleLanguage = () => {
+  const toggleLanguage = useCallback(() => {
     setLanguage((prev) => (prev === "id" ? "en" : "id"));
-  };
+  }, []);
 
-  const value = {
-    language,
-    setLanguage,
-    toggleLanguage,
-    t: translations[language] || translations.id,
-  };
+  // PERBAIKAN UTAMA: Bungkus 't' dan 'value' dengan useMemo
+  const t = useMemo(() => {
+    return translations[language] || translations.id;
+  }, [language]);
+
+  const value = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      toggleLanguage,
+      t,
+    }),
+    [language, toggleLanguage, t]
+  );
 
   return (
     <LanguageContext.Provider value={value}>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
-import svc1 from "@/assets/images/home6.jpg";
+import svc1 from "@/assets/images/home5.jpg";
 import svc2 from "@/assets/images/chemical-tanker.jpg";
 import svc3 from "@/assets/images/home6.jpg";
 import svc4 from "@/assets/images/offshore.jpg";
