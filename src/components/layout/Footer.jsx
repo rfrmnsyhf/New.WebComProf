@@ -71,7 +71,7 @@ const Footer = () => {
             <address className="mb-6 not-italic space-y-2 text-sm text-slate-400">
               <p className="flex items-center gap-2">
                 <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
-                  Alvin Prajatama :
+                  Alvian Prajatama :
                 </span>
                 <a
                   href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA`}
