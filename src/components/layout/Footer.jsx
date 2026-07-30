@@ -144,53 +144,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* FAQ Accordion - Single Expand */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              FAQ
-            </h3>
-            <div className="space-y-2.5">
-              {faqs.map((faq, index) => {
-                const isOpen = openFaqIndex === index;
-                return (
-                  <div
-                    key={index}
-                    className="border-b border-white/10 pb-2.5 transition-colors duration-200"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => toggleFaq(index)}
-                      className="flex w-full items-center justify-between gap-2 text-left text-sm font-medium text-slate-200 transition-colors duration-200 hover:text-accent"
-                      aria-expanded={isOpen}
-                    >
-                      <span>{faq.question}</span>
-                      <FaChevronDown
-                        className={`h-3 w-3 shrink-0 text-slate-400 transition-transform duration-300 ${
-                          isOpen ? "rotate-180 text-accent" : ""
-                        }`}
-                      />
-                    </button>
-                    
-                    {/* Konten Jawaban dengan Smooth Expand */}
-                    <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100 pt-2"
-                          : "grid-rows-[0fr] opacity-0"
-                      }`}
-                    >
-                      <div className="overflow-hidden">
-                        <p className="text-xs leading-relaxed text-slate-400">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
           {/* Bantuan Cepat */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
