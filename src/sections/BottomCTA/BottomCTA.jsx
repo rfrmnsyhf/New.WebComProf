@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { PhoneCall, Mail, ArrowRight, Anchor, ShieldCheck, Clock } from "lucide-react";
 import ContainerComponent from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,6 @@ import { useLanguage } from "@/context/LanguageContext";
 const BottomCTA = () => {
   const { t, language } = useLanguage();
 
-  const whatsappNum = company?.phoneWhatsApp2 || company?.phone || "6282171477799";
   const emailAddr = company?.email2 || "alvianprajatama@gmail.com";
 
   return (
@@ -74,10 +74,8 @@ const BottomCTA = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5"
           >
-            <a
-              href={`https://wa.me/${whatsappNum}?text=Halo%20CBSA,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20keagenan`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/whatsapp"
               className="w-full sm:w-auto"
             >
               <Button
@@ -88,7 +86,7 @@ const BottomCTA = () => {
                 <span>{t?.common?.consultNow || (language === "id" ? "Konsultasi Cepat" : "Quick Consultation")}</span>
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-4" />
               </Button>
-            </a>
+            </Link>
 
             <a href={`mailto:${emailAddr}`} className="w-full sm:w-auto">
               <Button

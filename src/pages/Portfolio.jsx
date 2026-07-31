@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import PageHero from "@/components/common/PageHero";
 import PortfolioIntro from "@/sections/Portfolio/PortfolioIntro";
 import PortfolioSection from "@/sections/Portfolio/Portfolio";
-import TestimonialsSection from "@/sections/Testimonials/Testimonials";
 import ClosingBanner from "@/sections/Portfolio/ClosingBanner";
 import portfolioHero from "@/assets/images/offshore.jpg";
 import { useLanguage } from "@/context/LanguageContext";
@@ -56,9 +55,6 @@ const Portfolio = () => {
       <section className="relative bg-slate-50/50 py-4">
         <PortfolioSection />
       </section>
-
-      {/* Client Testimonials */}
-      <TestimonialsSection />
 
       {/* Bottom Conversion / CTA Banner */}
       <ClosingBanner />

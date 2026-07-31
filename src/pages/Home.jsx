@@ -12,14 +12,9 @@ import svc4 from "@/assets/images/offshore.jpg";
 import svc5 from "@/assets/images/tug-barge.jpg";
 import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
-import TestimonialsSection from "@/sections/Testimonials/Testimonials";
 import PortfolioSection from "@/sections/Portfolio/Portfolio";
 import CertificationsSection from "@/sections/Certifications/Certifications";
 import { useLanguage } from "@/context/LanguageContext";
-
-// Helper WhatsApp link generator
-const buildWhatsAppLink = (phone, message = "Halo CBSA") =>
-  `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
 // Hook reusable animation variants
 const useMotionVariants = () => {
@@ -56,7 +51,6 @@ const SectionEyebrow = ({ children, motionProps = {}, className = "" }) => (
 const Home = () => {
   const { t, language } = useLanguage();
   const { fadeUp, fadeX, reduce } = useMotionVariants();
-  const waLink = buildWhatsAppLink(company.phoneWhatsApp2);
 
   // Modularize static translated values
   const values = [
@@ -142,10 +136,8 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a 
-                href={waLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <Link
+                to="/whatsapp"
                 aria-label="Konsultasi via WhatsApp"
               >
                 <Button
@@ -155,7 +147,7 @@ const Home = () => {
                   {t?.common?.consultNow || "Konsultasi Sekarang"}
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </Button>
-              </a>
+              </Link>
 
               <Link to="/services">
                 <Button
@@ -361,7 +353,6 @@ const Home = () => {
 
       {/* Additional Supporting Sections */}
       <IndustriesSection />
-      <TestimonialsSection />
       <PortfolioSection />
       <CertificationsSection />
 
@@ -415,10 +406,8 @@ const Home = () => {
             {...fadeUp(0.3)} 
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            <a 
-              href={waLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <Link
+              to="/whatsapp"
               aria-label="Konsultasi WhatsApp"
               className="w-full sm:w-auto"
             >
@@ -426,7 +415,7 @@ const Home = () => {
                 {t?.common?.consultNow || "Konsultasi Sekarang"}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
               </Button>
-            </a>
+            </Link>
 
             <a 
               href={`mailto:${company.email2 || "alvianprajatama@gmail.com"}`} 

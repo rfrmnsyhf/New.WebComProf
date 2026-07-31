@@ -1,14 +1,14 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import ContainerComponent from "@/components/layout/Container";
-import tankerImg from "@/assets/images/chemical-tanker.jpg";
-import offshoreImg from "@/assets/images/offshore.jpg";
+import tankerImg from "@/assets/images/tanker.png";
+import supplyoffshoreImg from "@/assets/images/supply-offshore.jpg";
 import tugBargeImg from "@/assets/images/tug-barge.jpg";
-import cargoImg from "@/assets/images/heavy-lift.jpg";
-import cruiseImg from "@/assets/images/cruise.jpg";
-import navalImg from "@/assets/images/naval.jpg";
-import dryBulkImg from "@/assets/images/dry-bulk.jpg";
-import reeferImg from "@/assets/images/reefer.jpg";
+import cargoImg from "@/assets/images/kontainer2.jpg";
+import yachtImg from "@/assets/images/yacht.jpg";
+import LNGImg from "@/assets/images/LNG.png";
+import dryBulkImg from "@/assets/images/bulk-carrier.jpg";
+import offshoreImg from "@/assets/images/offshore.png";
 import heavyLiftImg from "@/assets/images/heavy-lift.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -31,9 +31,9 @@ const VesselTypes = () => {
     },
     {
       image: dryBulkImg,
-      title: "Dry Bulk",
+      title: "Bulk Carrier",
       descriptionId: "Kapal curah kering untuk muatan komoditas massal.",
-      descriptionEn: "Dry bulk cargo carrier optimized for bulk commodities.",
+      descriptionEn: "Bulk carrier cargo carrier optimized for bulk commodities.",
     },
     {
       image: tugBargeImg,
@@ -42,10 +42,10 @@ const VesselTypes = () => {
       descriptionEn: "Tugboat and barge combination for coastal logistics.",
     },
     {
-      image: reeferImg,
-      title: "Reefer",
-      descriptionId: "Kapal pendingin untuk kargo segar dan mudah rusak.",
-      descriptionEn: "Refrigerated cargo vessel for perishable commodities.",
+      image: offshoreImg,
+      title: "Offshore Support",
+      descriptionId: "Dukungan logistik dan operasional untuk kilang minyak lepas pantai.",
+      descriptionEn: "Logistical and operational support for offshore oil rigs.",
     },
     {
       image: heavyLiftImg,
@@ -54,20 +54,20 @@ const VesselTypes = () => {
       descriptionEn: "Heavy project cargo carrier for oversized industrial structures.",
     },
     {
-      image: cruiseImg,
-      title: "Cruise",
-      descriptionId: "Kapal pesiar penumpang dengan layanan pelabuhan prioritas.",
-      descriptionEn: "Passenger cruise liner with priority port clearance services.",
+      image: yachtImg,
+      title: "Yacht & Passenger Ship",
+      descriptionId: "Keagenan yacht dengan fokus pada kenyamanan tamu serta prosedur pelabuhan yang efisien.",
+      descriptionEn: "Agency services for yacht focusing on guest comfort and efficient port procedures.",
     },
     {
-      image: navalImg,
-      title: "Naval",
-      descriptionId: "Kapal angkatan laut dan militer dengan koordinasi khusus.",
-      descriptionEn: "Naval and military vessel handled with secure coordination.",
+      image: LNGImg,
+      title: "LNG",
+      descriptionId: "Keagenan kapal pengangkut LNG/Gas berstandar keselamatan tinggi.",
+      descriptionEn: "Agency services for LNG/Gas carriers with high safety standards.",
     },
     {
-      image: offshoreImg,
-      title: "Offshore Support",
+      image: supplyoffshoreImg,
+      title: "Supply Offshore",
       descriptionId: "Kapal pendukung anjungan minyak dan gas lepas pantai.",
       descriptionEn: "Offshore supply & support vessel for oil and gas fields.",
     },

@@ -82,20 +82,7 @@ const Footer = () => {
                   +{company.phoneWhatsApp2}
                 </a>
               </p>
-
-              <p className="flex items-center gap-2">
-                <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
-                  Dedi Hermawan. L :
-                </span>
-                <a
-                  href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-200 hover:text-accent"
-                >
-                  +{company.phoneWhatsApp}
-                </a>
-              </p>
+              
               <p className="flex items-center gap-2">
                 <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
                   Email :
@@ -168,14 +155,12 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2.5">
               <li>
-                <a
-                  href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/whatsapp"
                   className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                 >
                   {t?.common?.chatWhatsapp || "Chat WhatsApp"}
-                </a>
+                </Link>
               </li>
               <li>
                 <a

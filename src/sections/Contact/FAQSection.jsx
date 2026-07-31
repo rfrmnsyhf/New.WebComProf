@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, PhoneCall, ArrowRight, HelpCircle, MessageSquare, ShieldCheck } from "lucide-react";
+import { ChevronDown, ArrowRight, HelpCircle, MessageSquare, ShieldCheck } from "lucide-react";
 import ContainerComponent from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
-import { company } from "@/constants/company";
 import { useLanguage } from "@/context/LanguageContext";
 
 // ==========================================
@@ -202,10 +202,8 @@ const FAQSection = () => {
                     : "Our port agency team is on standby to provide custom operational consultation and proforma agency disbursements."}
                 </p>
 
-                <a
-                  href={`https://wa.me/${company.phoneWhatsApp2 || company.phone}?text=Halo%20CBSA,%20saya%20ingin%20bertanya%20mengenai%20layanan%20keagenan`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/whatsapp"
                   className="inline-block w-full sm:w-auto"
                 >
                   <Button size="lg" className="w-full gap-2.5 rounded-xl bg-secondary font-bold text-white hover:bg-secondary/90 shadow-md transition-transform active:scale-95">
@@ -213,7 +211,7 @@ const FAQSection = () => {
                     <span>{language === "id" ? "Konsultasi via WhatsApp" : "Consult via WhatsApp"}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Button>
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

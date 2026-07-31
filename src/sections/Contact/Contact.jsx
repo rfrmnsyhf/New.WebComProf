@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Clock, ExternalLink } from "lucide-react";
+import { MapPin, Send, CheckCircle2, Clock, ExternalLink } from "lucide-react";
 import ContainerComponent from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { company } from "@/constants/company";
@@ -12,22 +12,6 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const contactInfo = [
-    {
-      icon: Phone,
-      label: "WhatsApp / Hotline",
-      value: `+${company.phoneWhatsApp2 || "6282171477799"}`,
-      href: `https://wa.me/${company.phoneWhatsApp2 || company.phone}?text=Halo%20CBSA,%20saya%20ingin%20berkonsultasi`,
-      external: true,
-      subtext: language === "id" ? "Respon cepat 24/7" : "Fast response 24/7",
-    },
-    {
-      icon: Mail,
-      label: "Email Resmi",
-      value: company.email || "info@cbsa.co.id",
-      href: `mailto:${company.email || "info@cbsa.co.id"}`,
-      external: false,
-      subtext: language === "id" ? "Untuk penawaran resmi" : "For official inquiries",
-    },
     {
       icon: MapPin,
       label: language === "id" ? "Alamat Kantor Utama" : "Head Office Address",

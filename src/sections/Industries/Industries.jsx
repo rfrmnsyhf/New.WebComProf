@@ -8,13 +8,12 @@ import {
   FlaskConical,
   Anchor,
   Weight,
-  Flag,
+  Drill,
+  Flame,
   UserCheck,
   Users,
   Settings,
   Truck,
-  Warehouse,
-  Snowflake,
   ShoppingCart,
   ArrowDownToLine,
   TrendingUp,
@@ -27,83 +26,75 @@ import { useLanguage } from "@/context/LanguageContext";
 // ==========================================
 const VESSEL_TYPES_RAW = [
   {
-    icon: Package,
-    title: "Break-Bulk",
-    description: {
-      id: "Layanan keagenan dan koordinasi bongkar muat untuk kapal break-bulk di pelabuhan Batam.",
-      en: "Full port agency and discharge coordination for break-bulk cargo vessels in Batam.",
-    },
-  },
-  {
     icon: ContainerIcon,
     title: "Container Ship",
     description: {
-      id: "Pengurusan dokumen lengkap, clearance, dan koordinasi bongkar muat untuk kapal peti kemas.",
-      en: "Complete documentation, berth priority, and container handling for liner and feeder ships.",
-    },
-  },
-  {
-    icon: Ship,
-    title: "Dry Bulk",
-    description: {
-      id: "Dukungan operasional dan perizinan untuk kapal pengangkut kargo curah kering.",
-      en: "Port agency and stevedoring supervision for dry bulk carriers carrying coal, minerals, and grains.",
-    },
-  },
-  {
-    icon: Sailboat,
-    title: "Cruise",
-    description: {
-      id: "Layanan keagenan dan husbandry untuk kapal pesiar serta koordinasi penumpang dan awak.",
-      en: "Dedicated port handling, passenger clearance, and luxury husbandry for cruise liners.",
+      id: "Kapal peti kemas dengan penanganan bongkar muat cepat.",
+      en: "Container carrier vessel with rapid turnaround handling.",
     },
   },
   {
     icon: FlaskConical,
-    title: "Chemicals & Product",
+    title: "Chemicals Tanker",
     description: {
-      id: "Layanan keagenan khusus untuk kapal tanker kimia dengan standar keselamatan MARPOL & ISM.",
-      en: "Specialized port call management for liquid chemical and refined product tankers.",
+      id: "Kapal tanker bahan kimia & minyak berstandar keselamatan tinggi.",
+      en: "Liquid chemical & oil tanker adhering to strict safety protocols.",
     },
   },
   {
-    icon: Warehouse,
-    title: "Oil & Gas",
+    icon: Ship,
+    title: "Bulk Carrier",
     description: {
-      id: "Dukungan logistik dan operasional untuk kapal pendukung industri minyak dan gas lepas pantai.",
-      en: "Offshore marine agency and logistics support for oil & gas exploration vessels and rigs.",
+      id: "Kapal curah kering untuk muatan komoditas massal.",
+      en: "Bulk carrier cargo carrier optimized for bulk commodities.",
     },
   },
   {
     icon: Anchor,
     title: "Tug & Barge",
     description: {
-      id: "Dukungan operasional untuk kapal tunda dan tongkang termasuk perizinan dan towing master.",
-      en: "Operational agency, towing permits, and anchorage clearances for tugboats and barges.",
+      id: "Kombinasi kapal tunda dan tongkang untuk logistik pesisir.",
+      en: "Tugboat and barge combination for coastal logistics.",
+    },
+  },
+  {
+    icon: Drill,
+    title: "Offshore Support",
+    description: {
+      id: "Dukungan logistik dan operasional untuk kilang minyak lepas pantai.",
+      en: "Logistical and operational support for offshore oil rigs.",
     },
   },
   {
     icon: Weight,
     title: "Heavy Lift",
     description: {
-      id: "Layanan keagenan untuk kapal heavy lift dengan kargo berat dan oversize.",
-      en: "Agency support and supercargo coordination for oversized heavy lift project cargo.",
+      id: "Kapal angkut barang berat dan proyek khusus berskala besar.",
+      en: "Heavy project cargo carrier for oversized industrial structures.",
     },
   },
   {
-    icon: Snowflake,
-    title: "Reefer",
+    icon: Sailboat,
+    title: "Yacht & Passenger Ship",
     description: {
-      id: "Pengurusan dokumen dan koordinasi cold chain untuk kapal pengangkut barang pendingin.",
-      en: "Port agency and refrigerated cargo monitoring for temperature-sensitive reefer ships.",
+      id: "Keagenan yacht dengan fokus pada kenyamanan tamu serta prosedur pelabuhan yang efisien.",
+      en: "Agency services for yacht focusing on guest comfort and efficient port procedures.",
     },
   },
   {
-    icon: Flag,
-    title: "Naval",
+    icon: Flame,
+    title: "LNG",
     description: {
-      id: "Layanan keagenan khusus untuk kapal angkatan laut / militer dengan protokol diplomatik.",
-      en: "Diplomatic clearance and specialized port agency protocol for naval and military vessels.",
+      id: "Keagenan kapal pengangkut LNG/Gas berstandar keselamatan tinggi.",
+      en: "Agency services for LNG/Gas carriers with high safety standards.",
+    },
+  },
+  {
+    icon: Package,
+    title: "Supply Offshore",
+    description: {
+      id: "Kapal pendukung anjungan minyak dan gas lepas pantai.",
+      en: "Offshore supply & support vessel for oil and gas fields.",
     },
   },
 ];

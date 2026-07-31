@@ -113,7 +113,7 @@ export const translations = {
       v4: "Heavy Lift & Project Cargo",
       v5: "Offshore Support Vessel (OSV)",
       v6: "Kapal Pesiar & Passenger Ship",
-      v7: "Kapal Angkatan Laut / Naval",
+      v7: "Kapal Gas / LNG",
     },
     // Why Choose Us / Stats
     whyUs: {
@@ -263,7 +263,7 @@ export const translations = {
       v4: "Heavy Lift & Project Cargo",
       v5: "Offshore Support Vessel (OSV)",
       v6: "Cruise & Passenger Ship",
-      v7: "Naval Vessels",
+      v7: "LNG",
     },
     // Why Choose Us / Stats
     whyUs: {
