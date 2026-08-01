@@ -2,7 +2,7 @@
 
 **Website**: https://cbsa.co.id/
 **Tech Stack**: React 19 + Vite 8, Tailwind CSS v4, shadcn/ui (base-vega), Framer Motion, React Router DOM v7
-**Last Updated**: 22 Juli 2026
+**Last Updated**: 1 Agustus 2026
 
 ---
 
@@ -19,23 +19,20 @@
 | 5 | Bug Fix | Industries.jsx `Container` naming collision → `ContainerIcon` | ✅ Selesai |
 | 6 | Bug Fix | Navbar accessibility — `aria-label`, `aria-expanded` | ✅ Selesai |
 | 7 | Bug Fix | Footer dead links (6 link `href="#"`) | ✅ Selesai |
-| 8 | Bug Fix | FounderStatement animasi — dari 70 IntersectionObserver → 1 container | ✅ Selesai |
-| 9 | Bug Fix | SharingLocalKnowledge `hero.png` 404 — import dari assets | ✅ Selesai |
-| 10 | Bug Fix | App.jsx — tambah route `/portfolio` | ✅ Selesai |
-| 11 | Bug Fix | Medical Evacuation icon `Package` → `HeartPulse` | ✅ Selesai |
-| 12 | Bug Fix | `aspect-4/3` → `aspect-4/3` untuk Tailwind v4 | ✅ Selesai |
-| 13 | Cleanup | Hapus `theme.js` (dead code), `Hero.jsx` (dead component) | ✅ Selesai |
-| 14 | Cleanup | Hapus 5 unused images (`home2.jpg`, `home3.jpg`, `home4.jpg`, `LOGOserap.png`, `aboutImg_serap.jpg`) | ✅ Selesai |
-| 15 | Cleanup | Hapus import `@fontsource-variable/inter` (ga kepake, Manrope yang dipake) | ✅ Selesai |
-| 16 | New Component | `PageHero.jsx` — reusable hero section (full-width bg + overlay + H1 + subtitle) | ✅ Selesai |
-| 17 | New Section | `VisualGallery.jsx` — slider foto horizontal dokumentasi lapangan (About page) | ✅ Selesai |
-| 18 | New Section | `MidCTA.jsx` — "Butuh Layanan Lainnya?" callout + tombol orange (Services page) | ✅ Selesai |
-| 19 | New Section | `ServiceTestimonials.jsx` — testimonial carousel untuk halaman Services | ✅ Selesai |
-| 20 | New Section | `PortfolioIntro.jsx` — H2 "Pengalaman yang Berbicara Lebih Keras dari Kata-Kata" | ✅ Selesai |
-| 21 | New Section | `ClosingBanner.jsx` — Banner CTA "Siap Bekerja Sama dengan Kami?" | ✅ Selesai |
-| 22 | New Section | `FAQSection.jsx` — FAQ accordion 5 pertanyaan + callout box (Contact page) | ✅ Selesai |
-| 23 | Page Update | 5 halaman (About, Services, Industries, Portfolio, Contact) — tambah Hero section | ✅ Selesai |
-| 24 | Page Update | 5 halaman — susun ulang section assembly sesuai referensi DMS | ✅ Selesai |
+| 8 | Bug Fix | SharingLocalKnowledge `hero.png` 404 — import dari assets | ✅ Selesai |
+| 9 | Bug Fix | Medical Evacuation icon `Package` → `HeartPulse` | ✅ Selesai |
+| 10 | Bug Fix | `aspect-4/3` → `aspect-4/3` untuk Tailwind v4 | ✅ Selesai |
+| 11 | Cleanup | Hapus `theme.js` (dead code), `Hero.jsx` (dead component) | ✅ Selesai |
+| 12 | Cleanup | Hapus 5 unused images (`home2.jpg`, `home3.jpg`, `home4.jpg`, `LOGOserap.png`, `aboutImg_serap.jpg`) | ✅ Selesai |
+| 13 | Cleanup | Hapus import `@fontsource-variable/inter` (ga kepake, Manrope yang dipake) | ✅ Selesai |
+| 14 | New Component | `PageHero.jsx` — reusable hero section (full-width bg + overlay + H1 + subtitle) | ✅ Selesai |
+| 15 | New Section | `VisualGallery.jsx` — slider foto horizontal dokumentasi lapangan (About page) | ✅ Selesai |
+| 16 | New Section | `FAQSection.jsx` — FAQ accordion 5 pertanyaan + callout box (Contact page) | ✅ Selesai |
+| 17 | Page Update | 4 halaman (About, Services, Industries, Contact) — tambah Hero section | ✅ Selesai |
+| 18 | Page Update | 4 halaman — susun ulang section assembly sesuai referensi DMS | ✅ Selesai |
+| 19 | Cleanup | Hapus section Portfolio (page + route `/portfolio`) — permintaan client | ✅ Selesai |
+| 20 | Cleanup | Hapus section Testimonials, ClientLogos, FounderStatement (data dummy) | ✅ Selesai |
+| 21 | Cleanup | Hapus section ServiceTestimonials (Testimoni Klien) — permintaan client | ✅ Selesai |
 
 ### Build & Lint
 
@@ -52,17 +49,14 @@
 ### Home (`/`)
 ```
 Hero (YouTube video background + H1 + CTA)
-→ ClientLogos (marquee scrolling)
 → Value Props (3 kartu: Profesionalisme, 24/7, Berpengalaman)
 → About Ringkas (gambar + floating badge "25+ Years" + deskripsi)
 → Stats (animated counters: 18+ Layanan, 11 Jenis Kapal, 7 Mitra, 24/7)
-→ Featured Services (5 kartu + carousel foto operasional)
+→ Featured Services (5 kartu)
 → Industries (11 vessel types + 7 stakeholders)
-→ Testimonials (crossfade carousel 3 testimoni)
-→ Portfolio (4 studi kasus grid)
-→ FounderStatement (word-by-word fade, initials avatar)
 → Certifications (6 sertifikasi)
 → BottomCTA ("Kapal Anda di Perairan Batam?")
+```
 ```
 
 ### About (`/about`)
@@ -80,9 +74,7 @@ PageHero ("Melayani Perairan Strategis Indonesia")
 PageHero ("Layanan Kami")
 → Services (18 layanan grid)
 → RangeOfServices (checklist 12 item)
-→ MidCTA ("Butuh Layanan Lainnya?") ← BARU
 → OperationalServices (9 aktivitas operasional grid)
-→ ServiceTestimonials (carousel testimoni klien) ← BARU
 → SharingLocalKnowledge (4 knowledge cards + Our Aim)
 ```
 
@@ -91,15 +83,6 @@ PageHero ("Layanan Kami")
 PageHero ("Sektor Yang Kami Layani")
 → Industries (11 vessel types + 7 stakeholders)
 → VesselTypes (9 foto kartu jenis kapal)
-```
-
-### Portfolio (`/portfolio`)
-```
-PageHero ("Pengalaman Yang Berbicara")
-→ PortfolioIntro (H2 "Pengalaman yang Berbicara Lebih Keras dari Kata-Kata") ← BARU
-→ Portfolio (4 studi kasus grid)
-→ Testimonials (crossfade carousel)
-→ ClosingBanner ("Siap Bekerja Sama dengan Kami?") ← BARU
 ```
 
 ### Contact (`/contact`)
@@ -118,37 +101,29 @@ PageHero ("Kontak Kami")
 
 | # | Section/File | Data Placeholder | Yang Dibutuhkan |
 |---|-------------|-----------------|-----------------|
-| 1 | `FounderStatement.jsx` | Kutipan founder buatan (naratif 70+ kata) | **Kutipan asli dari Capt. Darmansyah, M.Mar** — bisa berupa visi pribadinya, cerita pendirian CBSA, atau filosofi bisnisnya. Format: 2-3 kalimat singkat yang kuat dan memorable. |
-| 2 | `FounderStatement.jsx` | Inisial "CD" di avatar | **Foto profil founder** atau konfirmasi inisial yang benar (apakah memang Capt. Darmansyah?) |
-| 3 | `ClientLogos.jsx` | 6 nama client placeholder | **Daftar nama client asli CBSA** — minimal 4-6 nama perusahaan yang benar-benar menjadi klien. Contoh format: `{ name: "PT XXX", abbr: "XXX" }` |
-| 4 | `Testimonials.jsx` (Home + Portfolio) | 3 testimoni placeholder dengan "Operations Director", "Fleet Manager" tanpa nama asli | **3 testimoni asli dari klien CBSA** — butuh: (1) Kutipan asli, (2) Nama lengkap, (3) Jabatan, (4) Nama perusahaan |
-| 5 | `ServiceTestimonials.jsx` | 3 testimoni placeholder (sama dengan di Testimonials.jsx) | **Data sama atau testimoni tambahan** dari klien berbeda |
-| 6 | `Portfolio.jsx` | 4 studi kasus dengan deskripsi umum + gambar random | **4 studi kasus asli CBSA** — butuh: (1) Judul proyek, (2) Nama klien, (3) Deskripsi detail operasi, (4) Foto dokumentasi asli, (5) Kategori layanan |
-| 7 | `Certifications.jsx` | 6 sertifikasi (ISM Code, ISO 9001, SIUP, API, Bendera NKRI, SOLAS) | **Konfirmasi sertifikasi yang benar dimiliki CBSA** — ada yang perlu ditambah/dihapus? |
-| 8 | `Footer.jsx` | Social media links pakai placeholder `https://instagram.com/` | **URL sosmed asli CBSA** — Instagram, Facebook, LinkedIn, YouTube (kalau ada) |
-| 9 | `About.jsx` | Floating badge "25+ Years of Experience" | **Konfirmasi tahun berdiri CBSA** — apakah memang 25+ tahun? |
-| 10 | `VisualGallery.jsx` | 5 foto dari assets yang ada (bukan foto dokumentasi asli) | **Foto-foto dokumentasi operasional lapangan asli CBSA** — minimal 5-8 foto aktivitas nyata di pelabuhan |
+| 1 | `Certifications.jsx` | 6 sertifikasi (ISM Code, ISO 9001, SIUP, API, Bendera NKRI, SOLAS) | **Konfirmasi sertifikasi yang benar dimiliki CBSA** — ada yang perlu ditambah/dihapus? |
+| 2 | `Footer.jsx` | Social media links pakai placeholder `https://instagram.com/` | **URL sosmed asli CBSA** — Instagram, Facebook, LinkedIn, YouTube (kalau ada) |
+| 3 | `About.jsx` | Floating badge "25+ Years of Experience" | **Konfirmasi tahun berdiri CBSA** — apakah memang 25+ tahun? |
+| 4 | `VisualGallery.jsx` | 5 foto dari assets yang ada (bukan foto dokumentasi asli) | **Foto-foto dokumentasi operasional lapangan asli CBSA** — minimal 5-8 foto aktivitas nyata di pelabuhan |
 
 ### 🟡 PENTING — Perlu diperbarui
 
 | # | Section/File | Data Placeholder | Yang Dibutuhkan |
 |---|-------------|-----------------|-----------------|
-| 11 | `Company Logo` | `LOGO.png` (mungkin bukan logo final) | **Logo CBSA resolusi tinggi** — format PNG/SVG dengan background transparan |
-| 12 | `Home.jsx` Hero | YouTube video embed `DvlIk7SrZHk` | **Konfirmasi video hero** — apakah ini video yang tepat? Atau perlu diganti? |
-| 13 | `Contact.jsx` | Google Maps embed URL pakai alamat umum | **Pin location GPS yang tepat** untuk kantor CBSA di Jalan Duyung Sungai Jodoh |
-| 14 | `company.js` | Data kontak | **Verifikasi**: No. HP (0812-2700-0045), WhatsApp (6281227000045), Email (cbsa.batam@gmail.com), Alamat lengkap |
-| 15 | `Services.jsx` + `OperationalServices.jsx` | Deskripsi layanan umum | **Review deskripsi 18 layanan** — apakah sudah sesuai dengan definisi internal CBSA? |
-| 16 | `Industries.jsx` | Deskripsi per jenis kapal | **Review deskripsi 11 jenis kapal** — apakah sudah sesuai dengan pengalaman operasional? |
-| 17 | `VesselTypes.jsx` | 9 foto jenis kapal | **Ganti dengan foto asli armada** yang pernah ditangani CBSA (kalau ada) |
+| 6 | `Company Logo` | `LOGO.png` (mungkin bukan logo final) | **Logo CBSA resolusi tinggi** — format PNG/SVG dengan background transparan |
+| 7 | `Home.jsx` Hero | Video `LAUTJAYAV2.mov` | **Konfirmasi video hero** — apakah ini video yang tepat? Atau perlu diganti? |
+| 8 | `Contact.jsx` | Google Maps embed URL pakai alamat umum | **Pin location GPS yang tepat** untuk kantor CBSA di Jalan Duyung Sungai Jodoh |
+| 9 | `company.js` | Data kontak | **Verifikasi**: Email (cbsa.batam@gmail.com), Alamat lengkap |
+| 10 | `Services.jsx` + `OperationalServices.jsx` | Deskripsi layanan umum | **Review deskripsi 18 layanan** — apakah sudah sesuai dengan definisi internal CBSA? |
+| 11 | `Industries.jsx` | Deskripsi per jenis kapal | **Review deskripsi 11 jenis kapal** — apakah sudah sesuai dengan pengalaman operasional? |
+| 12 | `VesselTypes.jsx` | 9 foto jenis kapal | **Ganti dengan foto asli armada** yang pernah ditangani CBSA (kalau ada) |
 
 ### 🟢 Nice-to-Have
 
 | # | Section/File | Data | Keterangan |
 |---|-------------|------|-----------|
-| 18 | `Footer.jsx` | Privacy Policy & Syarat Ketentuan | Buat halaman hukum atau remove link |
-| 19 | `Footer.jsx` | Sosmed URLs | Isi URL asli atau remove ikon sosmed |
-| 20 | Homepage | Client logo images | Ganti text-only logos dengan gambar logo asli client |
-| 21 | Portfolio | Foto studi kasus | Ganti placeholder dengan foto dokumentasi asli per proyek |
+| 13 | `Footer.jsx` | Privacy Policy & Syarat Ketentuan | Buat halaman hukum atau remove link |
+| 14 | `Footer.jsx` | Sosmed URLs | Isi URL asli atau remove ikon sosmed |
 
 ---
 
@@ -163,21 +138,16 @@ PageHero ("Kontak Kami")
 | Services grid | ✅ Sudah ada (18 layanan) |
 | Vessel Types grid | ✅ Sudah ada (11 jenis) |
 | Stakeholders grid | ✅ Sudah ada (7 mitra) |
-| Testimonials carousel | ✅ Sudah ada |
-| Founder Statement | ✅ Sudah ada (word-by-word animation) |
 | Bottom CTA | ✅ Sudah ada |
 | FAQ Section di Contact | ✅ Sudah ditambah |
 | Visual Gallery di About | ✅ Sudah ditambah |
 | Mid CTA di Services | ✅ Sudah ditambah |
-| Portfolio Intro di Portfolio | ✅ Sudah ditambah |
-| Closing Banner di Portfolio | ✅ Sudah ditambah |
 
 ### Yang masih perlu perbaikan
 
 | Aspek | DMS (Referensi) | CBSA (Sekarang) | Yang Perlu |
 |-------|-----------------|-----------------|------------|
 | Layanan Utama | 5 pilar layanan + **carousel foto operasional** | Grid 18 layanan (tanpa foto) | Pertimbangkan tambah foto per layanan |
-| Portfolio Cards | 3 horizontal cards detail (Rig, Container, Dry-Docking) | 4 grid cards (format lebih ringkas) | Update dengan data studi kasus asli |
 | Gallery Carousel | Slider foto horizontal dokumentasi lapangan | Sudah ada (menggunakan foto yang tersedia) | Ganti dengan foto dokumentasi asli |
 | Social Media | Ada di footer | Ada tapi link placeholder | Isi URL asli |
 
@@ -218,12 +188,9 @@ PageHero ("Kontak Kami")
 
 ### Prioritas 1 — Data Asli (MENENTUKAN kualitas website)
 
-1. **Mintal data client asli** dari tim CBSA (nama perusahaan yang benar jadi klien)
-2. **Mintal testimoni asli** dari 3 klien (kutipan + nama + jabatan + perusahaan)
-3. **Mintal 4 studi kasus** dari tim operasional (proyek nyata yang pernah ditangani)
-4. **Konfirmasi sertifikasi** yang benar dimiliki CBSA
-5. **Mintal foto-foto** dokumentasi lapangan (minimal 10-15 foto)
-6. **Mintal logo CBSA** resolusi tinggi format PNG transparan
+1. **Konfirmasi sertifikasi** yang benar dimiliki CBSA
+2. **Mintal foto-foto** dokumentasi lapangan (minimal 10-15 foto)
+3. **Mintal logo CBSA** resolusi tinggi format PNG transparan
 
 ### Prioritas 2 — Fitur Tambahan
 
@@ -248,7 +215,7 @@ PageHero ("Kontak Kami")
 
 ```
 src/
-├── assets/images/         — 15 gambar (logo, hero, vessel types, about)
+├── assets/images/         — 20 gambar (logo, hero, vessel types, layanan, dokumentasi; PNG foto sudah dikonversi ke JPG via sharp ±1.9 MB total)
 ├── components/
 │   ├── common/
 │   │   ├── LoadingScreen.jsx    — Loading screen dengan animasi logo
@@ -271,8 +238,8 @@ src/
 │   ├── Home.jsx                 — Page: Beranda
 │   ├── Industries.jsx           — Page: Sektor
 │   ├── NotFound.jsx             — Page: 404
-│   ├── Portfolio.jsx            — Page: Portfolio
-│   └── Services.jsx             — Page: Layanan
+│   ├── Services.jsx             — Page: Layanan
+│   └── Whatsapp.jsx             — Page: WhatsApp
 ├── sections/
 │   ├── About/
 │   │   ├── About.jsx            — Deskripsi perusahaan + stats
@@ -281,13 +248,9 @@ src/
 │   │   └── BottomCTA.jsx        — CTA "Kapal Anda di Batam?"
 │   ├── Certifications/
 │   │   └── Certifications.jsx   — 6 sertifikasi
-│   ├── ClientLogos/
-│   │   └── ClientLogos.jsx      — Marquee scrolling logos
 │   ├── Contact/
 │   │   ├── Contact.jsx          — Form + info + maps
 │   │   └── FAQSection.jsx       — FAQ accordion [BARU]
-│   ├── FounderStatement/
-│   │   └── FounderStatement.jsx — Quote founder (word-by-word fade)
 │   ├── Industries/
 │   │   └── Industries.jsx       — 11 vessel types + 7 stakeholders
 │   ├── LocalKnowledge/
@@ -297,20 +260,13 @@ src/
 │   │   └── OperationalServices.jsx — 9 aktivitas operasional
 │   ├── Philosophy/
 │   │   └── Philosophy.jsx       — Visi + Misi + 4 nilai
-│   ├── Portfolio/
-│   │   ├── ClosingBanner.jsx    — CTA "Siap Bekerja Sama?" [BARU]
-│   │   ├── Portfolio.jsx        — 4 studi kasus grid
-│   │   └── PortfolioIntro.jsx   — Intro heading [BARU]
 │   ├── RangeOfServices/
 │   │   └── RangeOfServices.jsx  — Checklist 12 layanan
 │   ├── Services/
-│   │   ├── MidCTA.jsx           — "Butuh Layanan Lainnya?" [BARU]
-│   │   ├── ServiceTestimonials.jsx — Testimonial carousel [BARU]
+│   │   ├── CorePillars.jsx      — 3 pilar layanan
 │   │   └── Services.jsx         — 18 layanan grid
 │   ├── Stats/
 │   │   └── Stats.jsx            — Animated counters (4 stat)
-│   ├── Testimonials/
-│   │   └── Testimonials.jsx     — Crossfade carousel (3 testimoni)
 │   ├── VesselTypes/
 │   │   └── VesselTypes.jsx      — 9 foto kartu jenis kapal
 │   └── WhyChooseUs/

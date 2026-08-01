@@ -1,14 +1,14 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import ContainerComponent from "@/components/layout/Container";
-import tankerImg from "@/assets/images/tanker.png";
+import tankerImg from "@/assets/images/tanker.jpg";
 import supplyoffshoreImg from "@/assets/images/supply-offshore.jpg";
 import tugBargeImg from "@/assets/images/tug-barge.jpg";
 import cargoImg from "@/assets/images/kontainer2.jpg";
 import yachtImg from "@/assets/images/yacht.jpg";
-import LNGImg from "@/assets/images/LNG.png";
+import LNGImg from "@/assets/images/LNG.jpg";
 import dryBulkImg from "@/assets/images/bulk-carrier.jpg";
-import offshoreImg from "@/assets/images/offshore.png";
+import offshoreImg from "@/assets/images/offshore.jpg";
 import heavyLiftImg from "@/assets/images/heavy-lift.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -25,9 +25,9 @@ const VesselTypes = () => {
     },
     {
       image: tankerImg,
-      title: "Chemicals Tanker",
-      descriptionId: "Kapal tanker bahan kimia & minyak berstandar keselamatan tinggi.",
-      descriptionEn: "Liquid chemical & oil tanker adhering to strict safety protocols.",
+      title: "Tanker",
+      descriptionId: "Penanganan kapal tanker minyak olahan dan kimia cair dengan prosedur keselamatan ketat.",
+      descriptionEn: "Handling refined oil product and liquid chemical tankers under strict safety protocols.",
     },
     {
       image: dryBulkImg,

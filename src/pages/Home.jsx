@@ -1,18 +1,18 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { ArrowRight, ShieldCheck, Clock, MapPinned, Anchor } from "lucide-react";
 import Container from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { company } from "@/constants/company";
 import aboutImg from "@/assets/images/aboutImg.jpg";
-import svc1 from "@/assets/images/home5.jpg";
-import svc2 from "@/assets/images/home6.jpg";
-import svc3 from "@/assets/images/home7.jpg";
-import svc4 from "@/assets/images/offshore.jpg";
-import svc5 from "@/assets/images/tug-barge.jpg";
+import svc1 from "@/assets/images/svc1.jpg";
+import svc2 from "@/assets/images/svc2.jpg";
+import svc3 from "@/assets/images/svc3.jpg";
+import svc4 from "@/assets/images/svc4.jpg";
+import svc5 from "@/assets/images/svc5.jpg";
 import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
-import PortfolioSection from "@/sections/Portfolio/Portfolio";
 import CertificationsSection from "@/sections/Certifications/Certifications";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -35,6 +35,27 @@ const useMotionVariants = () => {
   });
 
   return { fadeUp, fadeX, reduce };
+};
+
+// Count-up number that animates when scrolled into view
+const CountUp = ({ end = 6, duration = 2.5 }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const reduce = useReducedMotion();
+  const value = useMotionValue(0);
+  const rounded = useTransform(value, (v) => Math.round(v));
+
+  useEffect(() => {
+    if (!inView) return;
+    if (reduce) {
+      value.set(end);
+      return;
+    }
+    const controls = animate(value, end, { duration, ease: "easeOut" });
+    return () => controls.stop();
+  }, [inView, end, duration, reduce, value]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
 };
 
 // Reusable eyebrow label
@@ -239,7 +260,9 @@ const Home = () => {
 
               {/* Enhanced Experience Badge */}
               <div className="absolute -bottom-6 -right-2 sm:-right-4 rounded-2xl border border-white/20 bg-cta/95 p-5 text-white shadow-2xl backdrop-blur-md md:right-6">
-                <span className="block text-3xl font-extrabold leading-none tracking-tight md:text-4xl">6+</span>
+                <span className="block text-3xl font-extrabold leading-none tracking-tight md:text-4xl">
+                  <CountUp end={6} duration={2.5} />+
+                </span>
                 <span className="text-xs font-semibold uppercase tracking-wider text-slate-100">
                   {language === "id" ? "Tahun Pengalaman" : "Years of Experience"}
                 </span>
@@ -353,7 +376,6 @@ const Home = () => {
 
       {/* Additional Supporting Sections */}
       <IndustriesSection />
-      <PortfolioSection />
       <CertificationsSection />
 
       {/* Bottom CTA Section */}

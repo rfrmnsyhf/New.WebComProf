@@ -4,7 +4,7 @@ import PhilosophySection from "@/sections/Philosophy/Philosophy";
 import WhyChooseUsSection from "@/sections/WhyChooseUs/WhyChooseUs";
 import VisualGallery from "@/sections/About/VisualGallery";
 import LocalKnowledgeSection from "@/sections/LocalKnowledge/LocalKnowledge";
-import aboutImg from "@/assets/images/aboutImg.jpg";
+import aboutImg from "@/assets/images/aboutusHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const About = () => {

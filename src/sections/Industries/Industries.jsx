@@ -35,10 +35,10 @@ const VESSEL_TYPES_RAW = [
   },
   {
     icon: FlaskConical,
-    title: "Chemicals Tanker",
+    title: "Tanker",
     description: {
-      id: "Kapal tanker bahan kimia & minyak berstandar keselamatan tinggi.",
-      en: "Liquid chemical & oil tanker adhering to strict safety protocols.",
+      id: "Penanganan kapal tanker minyak olahan & kimia cair berstandar keselamatan tinggi.",
+      en: "Handling refined oil & liquid chemical tankers under high safety standards.",
     },
   },
   {

@@ -2,7 +2,7 @@ import PageHero from "@/components/common/PageHero";
 import FAQSection from "@/sections/Contact/FAQSection";
 import ContactSection from "@/sections/Contact/Contact";
 import BottomCTASection from "@/sections/BottomCTA/BottomCTA";
-import contactHero from "@/assets/images/home7.jpg";
+import contactHero from "@/assets/images/contactHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Contact = () => {

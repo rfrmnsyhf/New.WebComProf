@@ -74,12 +74,12 @@ const Footer = () => {
                   Alvian Prajatama :
                 </span>
                 <a
-                  href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA`}
+                  href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors duration-200 hover:text-accent"
                 >
-                  +{company.phoneWhatsApp2}
+                  +{company.phoneWhatsApp}
                 </a>
               </p>
               

@@ -3,9 +3,8 @@ import ServicesSection from "@/sections/Services/Services";
 import CorePillarsSection from "@/sections/Services/CorePillars";
 import RangeOfServicesSection from "@/sections/RangeOfServices/RangeOfServices";
 import OperationalServicesSection from "@/sections/OperationalServices/OperationalServices";
-import ServiceTestimonials from "@/sections/Services/ServiceTestimonials";
 import SharingLocalKnowledgeSection from "@/sections/LocalKnowledge/SharingLocalKnowledge";
-import svcHero from "@/assets/images/home6.jpg";
+import svcHero from "@/assets/images/servicesHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Services = () => {
@@ -26,7 +25,6 @@ const Services = () => {
       <ServicesSection />
       <RangeOfServicesSection />
       <OperationalServicesSection />
-      <ServiceTestimonials />
       <SharingLocalKnowledgeSection />
     </>
   );

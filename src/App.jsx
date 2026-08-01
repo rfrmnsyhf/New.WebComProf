@@ -8,7 +8,6 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Industries from "@/pages/Industries";
 import Contact from "@/pages/Contact";
-import Portfolio from "@/pages/Portfolio";
 import Whatsapp from "@/pages/Whatsapp";
 import NotFound from "@/pages/NotFound";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -42,7 +41,6 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/whatsapp" element={<Whatsapp />} />
                 <Route path="*" element={<NotFound />} />
               </Route>

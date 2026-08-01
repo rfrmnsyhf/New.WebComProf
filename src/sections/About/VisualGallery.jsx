@@ -4,29 +4,29 @@ import ContainerComponent from "@/components/layout/Container";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Import Gambar Lapangan
-import img1 from "@/assets/images/home6.jpg";
-import img3 from "@/assets/images/home7.jpg";
-import img4 from "@/assets/images/offshore.jpg";
+import img4 from "@/assets/images/supply-offshore.jpg";
 import img5 from "@/assets/images/tug-barge.jpg";
+import bulkCarrier from "@/assets/images/bulk-carrier.jpg";
+import kontainer from "@/assets/images/kontainer2.jpg";
+import yacht from "@/assets/images/yacht.jpg";
+import heavyLift from "@/assets/images/heavy-lift.jpg";
+import aboutImg from "@/assets/images/aboutImg.jpg";
+import contactHero from "@/assets/images/contactHero.jpg";
+import industriesHero from "@/assets/images/industriesHero.jpg";
+import servicesHero from "@/assets/images/servicesHero.jpg";
+import offshorePng from "@/assets/images/offshore.jpg";
+import lngPng from "@/assets/images/LNG.jpg";
+import tankerPng from "@/assets/images/tanker.jpg";
+import svc1Png from "@/assets/images/svc1.jpg";
+import svc2Png from "@/assets/images/svc2.jpg";
+import svc3Png from "@/assets/images/svc3.jpg";
+import svc4Png from "@/assets/images/svc4.jpg";
+import svc5Png from "@/assets/images/svc5.jpg";
 
 // ==========================================
 // 1. DATA DEFINITION
 // ==========================================
 const GALLERY_RAW = [
-  {
-    src: img1,
-    alt: {
-      id: "Operasional Pelabuhan Batam",
-      en: "Batam Port Operations",
-    },
-  },
-  {
-    src: img3,
-    alt: {
-      id: "Koordinasi Bongkar Muat Kargo",
-      en: "Cargo Handling Coordination",
-    },
-  },
   {
     src: img4,
     alt: {
@@ -42,10 +42,115 @@ const GALLERY_RAW = [
     },
   },
   {
-    src: img3,
+    src: offshorePng,
     alt: {
-      id: "Dukungan Logistik Maritim",
-      en: "Maritime Logistics Support",
+      id: "Operasi Offshore Support",
+      en: "Offshore Support Operations",
+    },
+  },
+  {
+    src: lngPng,
+    alt: {
+      id: "Operasional Tanker LNG",
+      en: "LNG Tanker Operations",
+    },
+  },
+  {
+    src: tankerPng,
+    alt: {
+      id: "Operasional Tanker Minyak",
+      en: "Oil Tanker Operations",
+    },
+  },
+  {
+    src: svc1Png,
+    alt: {
+      id: "Keagenan Kapal & Pelabuhan",
+      en: "Ship Agency & Port Services",
+    },
+  },
+  {
+    src: svc2Png,
+    alt: {
+      id: "Chandler Kapal & Bunkering",
+      en: "Ship Chandler & Bunkering",
+    },
+  },
+  {
+    src: svc3Png,
+    alt: {
+      id: "Logistik & Bea Cukai",
+      en: "Logistics & Customs Clearance",
+    },
+  },
+  {
+    src: svc4Png,
+    alt: {
+      id: "Dukungan Offshore & Towing",
+      en: "Offshore Support & Towing",
+    },
+  },
+  {
+    src: svc5Png,
+    alt: {
+      id: "Husbandry & Crew Services",
+      en: "Husbandry & Crew Services",
+    },
+  },
+  {
+    src: bulkCarrier,
+    alt: {
+      id: "Operasional Kapal Bulk Carrier",
+      en: "Bulk Carrier Operations",
+    },
+  },
+  {
+    src: kontainer,
+    alt: {
+      id: "Penanganan Kapal Kontainer",
+      en: "Container Ship Operations",
+    },
+  },
+  {
+    src: yacht,
+    alt: {
+      id: "Layanan Kapal Yacht",
+      en: "Yacht Services",
+    },
+  },
+  {
+    src: heavyLift,
+    alt: {
+      id: "Operasi Heavy Lift",
+      en: "Heavy Lift Operations",
+    },
+  },
+  {
+    src: aboutImg,
+    alt: {
+      id: "Operasional Kapal di Pelabuhan Batam",
+      en: "Vessel Operations in Batam Port",
+    },
+  },
+  {
+    src: contactHero,
+    alt: {
+      id: "Kontak & Layanan Pelanggan",
+      en: "Contact & Customer Service",
+    },
+  },
+  {
+    src: industriesHero,
+    alt: {
+      id: "Sektor Industri yang Kami Layani",
+      en: "Industries We Serve",
+    },
+  },
+  {
+    src: servicesHero,
+    alt: {
+      id: "Layanan Maritim CBSA",
+      en: "CBSA Maritime Services",
     },
   },
 ];

@@ -1,7 +1,7 @@
 import PageHero from "@/components/common/PageHero";
 import IndustriesSection from "@/sections/Industries/Industries";
 import VesselTypesSection from "@/sections/VesselTypes/VesselTypes";
-import containerImg from "@/assets/images/dry-bulk.jpg";
+import containerImg from "@/assets/images/industriesHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Industries = () => {

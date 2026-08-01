@@ -3,9 +3,8 @@ export const company = {
   fullName: "PT CHANTIKA BAHARI SEJAHTERA ABADI",
   shortName: "CBSA",
   slogan: "Your Trusted Partner in Port & Shipping Agency",
-  phone: "6282385394882",
-  phoneWhatsApp: "6282385394882",
-  phoneWhatsApp2: "6282171477799",
+  phoneWhatsApp: "6282171477799",
+  phoneWhatsApp2: "6282121608787",
   email: "cbsa.batam@gmail.com",
   email2: "alvianprajatama@gmail.com",
   address:
