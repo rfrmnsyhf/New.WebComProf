@@ -153,7 +153,7 @@ const Contact = () => {
                         type="text"
                         required
                         placeholder={language === "id" ? "Contoh: John Doe" : "e.g. John Doe"}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
                       />
                     </div>
                     <div>
@@ -165,7 +165,7 @@ const Contact = () => {
                         type="email"
                         required
                         placeholder={language === "id" ? "nama@perusahaan.com" : "name@company.com"}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
                       />
                     </div>
                   </div>
@@ -183,7 +183,7 @@ const Contact = () => {
                           ? "Contoh: Permintaan Keagenan Kapal Tug & Barge"
                           : "e.g. Vessel Agency Request"
                       }
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
                     />
                   </div>
 
@@ -200,7 +200,7 @@ const Contact = () => {
                           ? "Tulis rincian kebutuhan keagenan, estimasi kedatangan kapal, atau kargo..."
                           : "Describe your agency or cargo support requirements..."
                       }
-                      className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
+                      className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base text-primary outline-none transition-all duration-200 focus:border-secondary focus:bg-white focus:ring-4 focus:ring-secondary/10"
                     />
                   </div>
 
@@ -259,7 +259,7 @@ const Contact = () => {
                             <ExternalLink className="h-3.5 w-3.5 text-slate-300 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-secondary" />
                           )}
                         </div>
-                        <p className="mt-1 truncate text-base font-bold text-primary transition-colors group-hover:text-secondary">
+                        <p className="mt-1 break-words text-base font-bold text-primary transition-colors group-hover:text-secondary">
                           {info.value}
                         </p>
                         <p className="mt-0.5 text-xs text-slate-500">{info.subtext}</p>
@@ -303,8 +303,7 @@ const Contact = () => {
               </div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0493!2d103.998546!3d1.156398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDknMjMuMCJOIDEwM8KwNTknNTQuOCJF!5e0!3m2!1sid!2sid!4v1785422480956"
-                width="100%"
-                height="240"
+                className="h-64 w-full md:h-72"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
