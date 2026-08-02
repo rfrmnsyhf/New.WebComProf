@@ -5,7 +5,7 @@ import {
   Clock, 
   ShieldCheck, 
   ArrowRight, 
-  Headset, 
+  UserRound, 
   Building2, 
   Anchor,
   Compass
@@ -30,17 +30,17 @@ const WhatsApp = () => {
 
   const waCards = [
     {
-      key: "cs",
-      icon: Headset,
-      label: language === "id" ? "Layanan Operasional 24/7" : "24/7 Operational Support",
-      name: language === "id" ? "Customer Service & Ops" : "Customer Service & Ops",
-      number: company.phoneWhatsApp || "6282385394882",
+      key: "owner",
+      icon: UserRound,
+      label: language === "id" ? "Pemilik & Direktur" : "Owner & Director",
+      name: "Alvian Prajatama Nugraha",
+      number: company.phoneWhatsApp || "6282171477799",
       desc:
         language === "id"
-          ? "Konsultasi cepat, informasi clearance pelabuhan, kebutuhan clearance agen, & penanganan darurat kapal 24 jam."
-          : "Fast consultation, port clearance info, agent clearance needs, & 24/7 emergency vessel support.",
-      badge: language === "id" ? "Respon Cepat 24/7" : "Fast Response 24/7",
-      message: "Halo%20CS%20CBSA%2C%20saya%20ingin%20bertanya%20mengenai%20layanan%20keagenan",
+          ? "Garis langsung ke owner — konsultasi keagenan, informasi clearance pelabuhan, & penanganan darurat kapal 24 jam."
+          : "Direct line to the owner — agency consultation, port clearance info, & 24/7 emergency vessel support.",
+      badge: language === "id" ? "Respon Cepat" : "Fast Response",
+      message: "Halo%20Pak%20Alvian%2C%20saya%20ingin%20bertanya%20mengenai%20layanan%20keagenan",
       accent: {
         icon: "text-emerald-600",
         iconBg: "bg-emerald-50 border-emerald-200",
@@ -56,7 +56,7 @@ const WhatsApp = () => {
       icon: Building2,
       label: language === "id" ? "Administrasi & Bisnis" : "Admin & Commercial",
       name: language === "id" ? "Kantor Pusat (Batam)" : "Head Office (Batam)",
-      number: company.phoneWhatsApp2 || "6282171477799",
+      number: company.phoneWhatsApp2 || "6282121608787",
       desc:
         language === "id"
           ? "Penawaran harga resmi (PDA), kerjasama kontrak jangka panjang, tagihan, dan keagenan armada skala besar."

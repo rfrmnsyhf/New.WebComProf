@@ -153,6 +153,51 @@ export const translations = {
       submitBtn: "Kirim Pesan Sekarang",
       successMsg: "Pesan Anda berhasil terkirim! Tim kami akan segera menghubungi Anda.",
     },
+    // Legal
+    legal: {
+      privacyPolicy: {
+        title: "Kebijakan Privasi",
+        lastUpdated: "Terakhir Diperbarui: 2026",
+        sections: [
+          {
+            heading: "Pengumpulan Informasi",
+            content:
+              "Kami mengumpulkan informasi pribadi yang Anda berikan secara sukarela melalui formulir kontak di situs web ini, seperti nama, alamat email, nomor telepon, dan rincian pesan untuk keperluan layanan keagenan kapal.",
+          },
+          {
+            heading: "Penggunaan Informasi",
+            content:
+              "Informasi yang dikumpulkan hanya digunakan untuk merespons permintaan Anda, menyediakan layanan keagenan maritim, dan meningkatkan kualitas komunikasi layanan kami. Kami tidak menjual atau membagikan data Anda kepada pihak ketiga.",
+          },
+          {
+            heading: "Keamanan Data",
+            content:
+              "PT. Chantika Bahari Sejahtera Abadi berkomitmen untuk menjaga keamanan data pribadi Anda dengan menerapkan langkah-langkah teknis dan organisasional yang tepat.",
+          },
+        ],
+      },
+      termsConditions: {
+        title: "Syarat & Ketentuan",
+        lastUpdated: "Terakhir Diperbarui: 2026",
+        sections: [
+          {
+            heading: "Ketentuan Umum",
+            content:
+              "Dengan mengakses dan menggunakan situs web PT. Chantika Bahari Sejahtera Abadi, Anda menyetujui untuk terikat oleh syarat dan ketentuan yang berlaku di situs ini.",
+          },
+          {
+            heading: "Hak Kekayaan Intelektual",
+            content:
+              "Seluruh konten, termasuk namun tidak terbatas pada teks, logo, gambar, dan desain grafis yang terdapat dalam situs web ini adalah milik PT. Chantika Bahari Sejahtera Abadi dan dilindungi oleh undang-undang hak cipta.",
+          },
+          {
+            heading: "Batasan Tanggung Jawab",
+            content:
+              "Informasi di situs web ini disediakan untuk tujuan informasi umum. Kami berusaha menjaga keakuratan data, namun tidak bertanggung jawab atas kerugian akibat penggunaan informasi di situs ini tanpa konfirmasi langsung.",
+          },
+        ],
+      },
+    },
   },
   en: {
     // Nav
@@ -302,6 +347,51 @@ export const translations = {
       formMessage: "Message or Request Details",
       submitBtn: "Send Message Now",
       successMsg: "Your message has been sent successfully! Our team will get back to you shortly.",
+    },
+    // Legal
+    legal: {
+      privacyPolicy: {
+        title: "Privacy Policy",
+        lastUpdated: "Last Updated: 2026",
+        sections: [
+          {
+            heading: "1. Information Collection",
+            content:
+              "We collect personal information that you voluntarily provide via the contact form on this website, such as your name, email address, phone number, and message details for shipping agency service inquiries.",
+          },
+          {
+            heading: "2. Use of Information",
+            content:
+              "The information collected is used solely to respond to your inquiries, provide maritime agency services, and improve our communication quality. We do not sell or share your data with third parties.",
+          },
+          {
+            heading: "3. Data Security",
+            content:
+              "PT. Chantika Bahari Sejahtera Abadi is committed to safeguarding your personal data by implementing appropriate technical and organizational measures.",
+          },
+        ],
+      },
+      termsConditions: {
+        title: "Terms & Conditions",
+        lastUpdated: "Last Updated: 2026",
+        sections: [
+          {
+            heading: "1. General Terms",
+            content:
+              "By accessing and using the PT. Chantika Bahari Sejahtera Abadi website, you agree to be bound by the terms and conditions set forth on this site.",
+          },
+          {
+            heading: "2. Intellectual Property Rights",
+            content:
+              "All content, including but not limited to text, logos, images, and graphic designs on this website, is the property of PT. Chantika Bahari Sejahtera Abadi and protected by copyright laws.",
+          },
+          {
+            heading: "3. Limitation of Liability",
+            content:
+              "Information on this website is provided for general informational purposes. While we strive for accuracy, we are not liable for any losses resulting from the reliance on this site's information without direct confirmation.",
+          },
+        ],
+      },
     },
   },
 };

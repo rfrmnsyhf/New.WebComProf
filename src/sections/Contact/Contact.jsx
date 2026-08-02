@@ -33,7 +33,7 @@ const Contact = () => {
     const message = form.elements.message.value;
 
     const body = `Halo CBSA,\n\nNama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`;
-    const mailtoUrl = `mailto:${company.email2 || "alvianprajatama@gmail.com"}?subject=${encodeURIComponent(
+    const mailtoUrl = `mailto:${company.email || "cbsa.batam@gmail.com"}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 
@@ -259,7 +259,7 @@ const Contact = () => {
                             <ExternalLink className="h-3.5 w-3.5 text-slate-300 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-secondary" />
                           )}
                         </div>
-                        <p className="mt-1 break-words text-base font-bold text-primary transition-colors group-hover:text-secondary">
+                        <p className="mt-1 wrap-break-word text-base font-bold text-primary transition-colors group-hover:text-secondary">
                           {info.value}
                         </p>
                         <p className="mt-0.5 text-xs text-slate-500">{info.subtext}</p>

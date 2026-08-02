@@ -3,7 +3,7 @@ import Container from "@/components/layout/Container";
 
 const PageHero = ({ title, subtitle, image }) => {
   return (
-    <section className="relative flex min-h-[50vh] items-center overflow-hidden bg-primary pt-20">
+    <section className="relative flex min-h-[50vh] items-center overflow-hidden bg-primary pt-20 print:hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

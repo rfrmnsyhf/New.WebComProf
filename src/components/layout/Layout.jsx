@@ -11,7 +11,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-20 print:pt-0">
         <Outlet />
       </main>
       {!isWhatsAppPage && <Footer />}

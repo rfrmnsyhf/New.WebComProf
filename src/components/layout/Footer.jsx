@@ -1,27 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaChevronDown } from "react-icons/fa";
 import Container from "@/components/layout/Container";
 import { company } from "@/constants/company";
 import logo from "@/assets/images/LOGO.png";
 import { useLanguage } from "@/context/LanguageContext";
 
-const socialLinks = [
-  { icon: FaInstagram, href: "https://instagram.com/", label: "Instagram" },
-  { icon: FaFacebookF, href: "https://facebook.com/", label: "Facebook" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com/", label: "LinkedIn" },
-];
-
 const Footer = () => {
   const { t } = useLanguage();
-
-  // State untuk melacak indeks FAQ mana yang sedang terbuka (null = semua tertutup)
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
-
-  const toggleFaq = (index) => {
-    // Jika item yang diklik sudah terbuka, tutup (set null). Jika belum, buka item tersebut.
-    setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
 
   const servicesList = [
     t?.services?.s1Title,
@@ -32,12 +16,6 @@ const Footer = () => {
     t?.services?.s6Title,
   ].filter(Boolean);
 
-  const faqs = [
-    { question: t?.faq?.q1, answer: t?.faq?.a1 },
-    { question: t?.faq?.q2, answer: t?.faq?.a2 },
-    { question: t?.faq?.q3, answer: t?.faq?.a3 },
-  ];
-
   const navigation = [
     { name: t?.nav?.home || "Beranda", href: "/" },
     { name: t?.nav?.about || "Tentang", href: "/about" },
@@ -47,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-white" aria-labelledby="footer-heading">
+    <footer className="bg-primary text-white print:hidden" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       
       <Container className="py-16">
@@ -71,7 +49,7 @@ const Footer = () => {
             <address className="mb-6 not-italic space-y-2 text-sm text-slate-400">
               <p className="flex items-center gap-2">
                 <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
-                  Alvian Prajatama :
+                  Owner :
                 </span>
                 <a
                   href={`https://wa.me/${company.phoneWhatsApp}?text=Halo%20CBSA`}
@@ -80,6 +58,20 @@ const Footer = () => {
                   className="transition-colors duration-200 hover:text-accent"
                 >
                   +{company.phoneWhatsApp}
+                </a>
+              </p>
+
+              <p className="flex items-center gap-2">
+                <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                  Admin :
+                </span>
+                <a
+                  href={`https://wa.me/${company.phoneWhatsApp2}?text=Halo%20CBSA`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-200 hover:text-accent"
+                >
+                  +{company.phoneWhatsApp2}
                 </a>
               </p>
               
@@ -177,15 +169,15 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-xs sm:text-sm text-slate-400">
-            &copy; {new Date().getFullYear()} {company.name}. {t?.common?.allRightsReserved || "All Rights Reserved."}
+            &copy; 2020 - {new Date().getFullYear()} {company.name}. {t?.common?.allRightsReserved || "All Rights Reserved."}
           </p>
           <div className="flex gap-6 text-xs sm:text-sm text-slate-400">
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors duration-200 hover:text-accent">
+            <Link to="/privacy-policy" className="transition-colors duration-200 hover:text-accent">
               {t?.common?.privacyPolicy || "Privacy Policy"}
-            </a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-accent">
+            </Link>
+            <Link to="/terms-conditions" className="transition-colors hover:text-accent">
               {t?.common?.termsConditions || "Terms & Conditions"}
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

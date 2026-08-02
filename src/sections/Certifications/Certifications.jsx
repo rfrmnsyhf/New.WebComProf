@@ -158,8 +158,14 @@ const Certifications = () => {
                 <ShieldCheck className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs font-bold text-primary">100% Fully Compliant</p>
-                <p className="text-[11px] text-slate-500">Maritime Regulations & IMO Standards</p>
+                <p className="text-xs font-bold text-primary">
+                  {language === "id" ? "100% Patuh Penuh" : "100% Fully Compliant"}
+                </p>
+                <p className="text-[11px] text-slate-500">
+                  {language === "id"
+                    ? "Regulasi Maritim & Standar IMO"
+                    : "Maritime Regulations & IMO Standards"}
+                </p>
               </div>
             </motion.div>
           </div>

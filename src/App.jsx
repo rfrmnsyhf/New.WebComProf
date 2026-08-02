@@ -9,6 +9,8 @@ import Services from "@/pages/Services";
 import Industries from "@/pages/Industries";
 import Contact from "@/pages/Contact";
 import Whatsapp from "@/pages/Whatsapp";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsConditions from "@/pages/TermsConditions";
 import NotFound from "@/pages/NotFound";
 import { LanguageProvider } from "@/context/LanguageContext";
 
@@ -42,6 +44,8 @@ function App() {
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/whatsapp" element={<Whatsapp />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>

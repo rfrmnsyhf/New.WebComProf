@@ -2,7 +2,7 @@
 
 **Website**: https://cbsa.co.id/
 **Tech Stack**: React 19 + Vite 8, Tailwind CSS v4, shadcn/ui (base-vega), Framer Motion, React Router DOM v7
-**Last Updated**: 1 Agustus 2026
+**Last Updated**: 3 Agustus 2026
 
 ---
 
@@ -33,12 +33,20 @@
 | 19 | Cleanup | Hapus section Portfolio (page + route `/portfolio`) — permintaan client | ✅ Selesai |
 | 20 | Cleanup | Hapus section Testimonials, ClientLogos, FounderStatement (data dummy) | ✅ Selesai |
 | 21 | Cleanup | Hapus section ServiceTestimonials (Testimoni Klien) — permintaan client | ✅ Selesai |
+| 22 | Image Opt | Kompresi semua gambar via `sharp` (12 PNG→JPG, 7 JPG recompress, LOGO resize) — total ±1.86 MB | ✅ Selesai |
+| 23 | Responsive | Contact page — input `text-base` (cegah auto-zoom iOS), alamat `break-words`, peta `h-64 md:h-72 w-full` | ✅ Selesai |
+| 24 | Bug Fix | Footer copyright dinamis `© 2020 - {year}` | ✅ Selesai |
+| 25 | Update | Kartu WhatsApp jadi kartu Owner (Alvian Prajatama) + kartu Kantor Pusat | ✅ Selesai |
+| 26 | New Page | `PrivacyPolicy.jsx` & `TermsConditions.jsx` + routes `/privacy-policy`, `/terms-conditions` + link footer | ✅ Selesai |
+| 27 | Bug Fix | Bahasa legal pages — `t?.language === "id"` → `language === "id"` (destructure `{ t, language }`) | ✅ Selesai |
+| 28 | Bug Fix | Bahasa Certifications badge — "100% Fully Compliant" → ternary ID/EN | ✅ Selesai |
+| 29 | Print CSS | Print stylesheet — halaman legal output A4 rapi (chrome disembunyikan, header dokumen khusus print) | ✅ Selesai |
 
 ### Build & Lint
 
 | Cek | Hasil |
 |-----|-------|
-| `npm run build` | ✅ Sukses (507ms) |
+| `npm run build` | ✅ Sukses (775ms) |
 | `npx eslint src/` | ✅ 0 errors |
 | `git commit` | ✅ 2 commits (b67ea60, be83677) |
 
@@ -165,6 +173,12 @@ PageHero ("Kontak Kami")
 | `bg-linear-to-*` | Canonical v4 class (bukan `bg-gradient-to-*`) |
 | `z-[100]` | Pakai arbitrary value untuk z-index non-standard |
 
+### Print Stylesheet (Halaman Legal)
+
+- `@media print` global di `index.css`: `@page { size: A4; margin: 15mm }`, body `bg #fff`.
+- Chrome disembunyikan saat print (`print:hidden`): Navbar, Footer, WhatsAppButton, BackToTop, PageHero; `main` pakai `print:pt-0`.
+- Halaman legal punya header dokumen khusus print (`hidden print:block`): judul + last updated di bawah garis, meta box & callout `print:hidden`, section `print:gap-3`, heading `print:text-black`.
+
 ### Font
 
 - **Body**: Manrope (di-import via `@fontsource/manrope` di `main.jsx`)
@@ -219,7 +233,9 @@ src/
 ├── components/
 │   ├── common/
 │   │   ├── LoadingScreen.jsx    — Loading screen dengan animasi logo
-│   │   └── PageHero.jsx         — Reusable hero section [BARU]
+│   │   ├── PageHero.jsx         — Reusable hero section [BARU]
+│   │   ├── WhatsAppButton.jsx   — Tombol WA fixed bottom-right
+│   │   └── BackToTop.jsx        — Tombol back-to-top fixed bottom-left
 │   ├── layout/
 │   │   ├── Container.jsx        — Container wrapper
 │   │   ├── Footer.jsx           — Footer 6 kolom
@@ -238,7 +254,9 @@ src/
 │   ├── Home.jsx                 — Page: Beranda
 │   ├── Industries.jsx           — Page: Sektor
 │   ├── NotFound.jsx             — Page: 404
+│   ├── PrivacyPolicy.jsx        — Page: Kebijakan Privasi [BARU]
 │   ├── Services.jsx             — Page: Layanan
+│   ├── TermsConditions.jsx      — Page: Syarat & Ketentuan [BARU]
 │   └── Whatsapp.jsx             — Page: WhatsApp
 ├── sections/
 │   ├── About/
@@ -271,7 +289,7 @@ src/
 │   │   └── VesselTypes.jsx      — 9 foto kartu jenis kapal
 │   └── WhyChooseUs/
 │       └── WhyChooseUs.jsx      — 8 keunggulan kompetitif
-├── App.jsx                      — Router setup
+├── App.jsx                      — Router setup (7 halaman + 2 halaman legal: /privacy-policy, /terms-conditions)
 ├── index.css                    — Tailwind v4 config + custom theme
 └── main.jsx                     — Entry point
 ```

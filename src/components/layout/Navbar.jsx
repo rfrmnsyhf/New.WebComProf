@@ -100,7 +100,7 @@ const Navbar = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 print:hidden ${
         scrolled
           ? "bg-white/120 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3" //opacity 120% for better visibility on scroll
           : "bg-white/60 backdrop-blur-xs py-5"

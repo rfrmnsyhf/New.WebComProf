@@ -6,7 +6,7 @@ const WhatsAppButton = () => {
   return (
     <Link
       to="/whatsapp"
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-6 right-6 z-50 print:hidden"
       aria-label="Chat WhatsApp"
     >
       <motion.div

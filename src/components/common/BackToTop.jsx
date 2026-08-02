@@ -27,7 +27,7 @@ const BackToTop = () => {
           exit={{ opacity: 0, scale: 0 }}
           transition={{ duration: 0.2 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-primary shadow-lg transition-all hover:border-secondary/30 hover:shadow-xl"
+          className="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-primary shadow-lg transition-all hover:border-secondary/30 hover:shadow-xl print:hidden"
           aria-label="Kembali ke atas"
         >
           <ArrowUp className="h-5 w-5" />
