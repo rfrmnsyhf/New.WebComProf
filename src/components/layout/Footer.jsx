@@ -169,7 +169,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-xs sm:text-sm text-slate-400">
-            &copy; 2020 - {new Date().getFullYear()} {company.name}. {t?.common?.allRightsReserved || "All Rights Reserved."}
+            &copy; 2020 {company.name}. {t?.common?.allRightsReserved || "All Rights Reserved."}
           </p>
           <div className="flex gap-6 text-xs sm:text-sm text-slate-400">
             <Link to="/privacy-policy" className="transition-colors duration-200 hover:text-accent">
