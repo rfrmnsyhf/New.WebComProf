@@ -1,4 +1,5 @@
 import PageHero from "@/components/common/PageHero";
+import { Helmet } from "react-helmet-async";
 import ServicesSection from "@/sections/Services/Services";
 import CorePillarsSection from "@/sections/Services/CorePillars";
 import RangeOfServicesSection from "@/sections/RangeOfServices/RangeOfServices";
@@ -12,6 +13,28 @@ const Services = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "id"
+            ? "Layanan | CBSA - Ship Agency, Chandler & Bunkering"
+            : "Services | CBSA - Ship Agency, Chandler & Bunkering"}
+        </title>
+        <meta
+          name="description"
+          content={
+            language === "id"
+              ? "Layanan maritim CBSA: ship agency & port services, ship chandler & bunkering, logistics & customs clearance, offshore support, husbandry, dan crew manning di Batam."
+              : "CBSA maritime services: ship agency & port services, ship chandler & bunkering, logistics & customs clearance, offshore support, husbandry, and crew manning in Batam."
+          }
+        />
+        <link rel="canonical" href="https://cbsabatam.com/services" />
+        <meta property="og:url" content="https://cbsabatam.com/services" />
+        <meta property="og:title" content="Our Services | CBSA" />
+        <meta
+          property="og:description"
+          content="Comprehensive maritime services for vessels in Batam: ship agency, chandler, bunkering, logistics, and offshore support."
+        />
+      </Helmet>
       <PageHero
         title={t.services.tag}
         subtitle={

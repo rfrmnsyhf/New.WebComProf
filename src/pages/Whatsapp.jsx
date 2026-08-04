@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
   MessageCircle, 
   PhoneCall, 
@@ -76,7 +77,30 @@ const WhatsApp = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white py-20 lg:py-28 text-slate-900 flex flex-col justify-center">
+    <>
+      <Helmet>
+        <title>
+          {language === "id"
+            ? "Pusat Bantuan WhatsApp | CBSA Batam"
+            : "WhatsApp Support Hub | CBSA Batam"}
+        </title>
+        <meta
+          name="description"
+          content={
+            language === "id"
+              ? "Hubungi tim operasional atau manajemen PT. Chantika Bahari Sejahtera Abadi (CBSA) langsung melalui WhatsApp resmi. Layanan 24/7 di Batam."
+              : "Reach PT. Chantika Bahari Sejahtera Abadi (CBSA) operational and management team directly via official WhatsApp. 24/7 support in Batam."
+          }
+        />
+        <link rel="canonical" href="https://cbsabatam.com/whatsapp" />
+        <meta property="og:url" content="https://cbsabatam.com/whatsapp" />
+        <meta property="og:title" content="WhatsApp Support Hub | CBSA" />
+        <meta
+          property="og:description"
+          content="Choose an official WhatsApp channel to connect with CBSA's operational or management team."
+        />
+      </Helmet>
+      <div className="relative min-h-screen overflow-hidden bg-white py-20 lg:py-28 text-slate-900 flex flex-col justify-center">
       {/* Soft sky wash instead of dark glow orbs */}
       <div className="absolute inset-0 -z-20 bg-linear-to-b from-sky-50/70 via-white to-white" />
 
@@ -275,6 +299,7 @@ const WhatsApp = () => {
         </motion.div>
       </ContainerComponent>
     </div>
+    </>
   );
 };
 

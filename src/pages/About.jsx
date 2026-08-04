@@ -1,4 +1,5 @@
 import PageHero from "@/components/common/PageHero";
+import { Helmet } from "react-helmet-async";
 import AboutSection from "@/sections/About/About";
 import PhilosophySection from "@/sections/Philosophy/Philosophy";
 import WhyChooseUsSection from "@/sections/WhyChooseUs/WhyChooseUs";
@@ -12,6 +13,28 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "id"
+            ? "Tentang Kami | CBSA - Keagenan Kapal Batam"
+            : "About Us | CBSA - Ship Agency Batam"}
+        </title>
+        <meta
+          name="description"
+          content={
+            language === "id"
+              ? "Kenali PT. Chantika Bahari Sejahtera Abadi (CBSA) — keagenan kapal dan jasa maritim independen terpercaya di Batam, Selat Malaka, dan Selat Singapura."
+              : "Get to know PT. Chantika Bahari Sejahtera Abadi (CBSA) — trusted independent shipping agency and maritime services in Batam, Malacca Strait, and Singapore Strait."
+          }
+        />
+        <link rel="canonical" href="https://cbsabatam.com/about" />
+        <meta property="og:url" content="https://cbsabatam.com/about" />
+        <meta property="og:title" content="About Us | CBSA" />
+        <meta
+          property="og:description"
+          content="Trusted independent shipping agency and maritime services in Batam, Indonesia."
+        />
+      </Helmet>
       <PageHero
         title={
           language === "id"

@@ -142,9 +142,12 @@ const Footer = () => {
 
           {/* Bantuan Cepat */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <Link
+              to="/whatsapp"
+              className="mb-4 block text-sm font-semibold uppercase tracking-wider text-white transition-colors duration-200 hover:text-accent"
+            >
               {t?.common?.quickHelp || "Bantuan Cepat"}
-            </h3>
+            </Link>
             <ul className="space-y-2.5">
               <li>
                 <Link

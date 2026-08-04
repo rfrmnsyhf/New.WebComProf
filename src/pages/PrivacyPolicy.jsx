@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/common/PageHero";
+import { Helmet } from "react-helmet-async";
 import Container from "@/components/layout/Container";
 import heroBg from "@/assets/images/aboutusHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
@@ -78,6 +79,28 @@ const PrivacyPolicy = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "id"
+            ? "Kebijakan Privasi | CBSA"
+            : "Privacy Policy | CBSA"}
+        </title>
+        <meta
+          name="description"
+          content={
+            language === "id"
+              ? "Kebijakan Privasi PT. Chantika Bahari Sejahtera Abadi (CBSA) — cara kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda."
+              : "Privacy Policy of PT. Chantika Bahari Sejahtera Abadi (CBSA) — how we collect, use, and protect your personal data."
+          }
+        />
+        <link rel="canonical" href="https://cbsabatam.com/privacy-policy" />
+        <meta property="og:url" content="https://cbsabatam.com/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | CBSA" />
+        <meta
+          property="og:description"
+          content="Read how CBSA collects, uses, and protects your personal data."
+        />
+      </Helmet>
       <PageHero title={legal.title} subtitle="" image={heroBg} />
 
       <section className="relative overflow-hidden bg-slate-50/60 py-16 lg:py-24 print:bg-white print:py-6">

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion, useReducedMotion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { ArrowRight, ShieldCheck, Clock, MapPinned, Anchor } from "lucide-react";
 import Container from "@/components/layout/Container";
@@ -114,6 +115,32 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "id"
+            ? "CBSA | Ship Agency & Maritime Logistics Batam"
+            : "CBSA | Ship Agency & Maritime Logistics Batam"}
+        </title>
+        <meta
+          name="description"
+          content={
+            language === "id"
+              ? "PT. Chantika Bahari Sejahtera Abadi (CBSA) — solusi ship agency, port services, bunkering, dan maritime logistics terpercaya di Batam, Indonesia. Layanan 24/7."
+              : "PT. Chantika Bahari Sejahtera Abadi (CBSA) — trusted ship agency, port services, bunkering, and maritime logistics in Batam, Indonesia. 24/7 support."
+          }
+        />
+        <link rel="canonical" href="https://cbsabatam.com/" />
+        <meta property="og:url" content="https://cbsabatam.com/" />
+        <meta property="og:title" content="CBSA | Ship Agency & Maritime Logistics Batam" />
+        <meta
+          property="og:description"
+          content={
+            language === "id"
+              ? "Solusi keagenan kapal dan logistik maritim terpadu di Batam. Hubungi tim operasional kami 24/7."
+              : "Integrated ship agency and maritime logistics solutions in Batam. Contact our 24/7 operational team."
+          }
+        />
+      </Helmet>
       {/* Hero Section */}
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-primary">
         <div className="absolute inset-0 overflow-hidden">

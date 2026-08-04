@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, Clock, ShieldCheck, FileText, Printer, MessageSquare, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/common/PageHero";
+import { Helmet } from "react-helmet-async";
 import Container from "@/components/layout/Container";
 import heroBg from "@/assets/images/servicesHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
@@ -70,6 +71,28 @@ const TermsConditions = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {language === "id"
+            ? "Syarat & Ketentuan | CBSA"
+            : "Terms & Conditions | CBSA"}
+        </title>
+        <meta
+          name="description"
+          content={
+            language === "id"
+              ? "Syarat dan Ketentuan penggunaan situs PT. Chantika Bahari Sejahtera Abadi (CBSA) serta layanan keagenan kapal dan maritim di Batam."
+              : "Terms and Conditions for using the PT. Chantika Bahari Sejahtera Abadi (CBSA) website and ship agency maritime services in Batam."
+          }
+        />
+        <link rel="canonical" href="https://cbsabatam.com/terms-conditions" />
+        <meta property="og:url" content="https://cbsabatam.com/terms-conditions" />
+        <meta property="og:title" content="Terms & Conditions | CBSA" />
+        <meta
+          property="og:description"
+          content="Read the Terms and Conditions for using CBSA website and maritime agency services."
+        />
+      </Helmet>
       <PageHero title={legal.title} subtitle="" image={heroBg} />
 
       <section className="relative overflow-hidden bg-slate-50/60 py-16 lg:py-24 print:bg-white print:py-6">
