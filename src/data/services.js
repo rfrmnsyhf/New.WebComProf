@@ -23,6 +23,7 @@ export const services = [
   {
     title: "Arrival & Departure Clearance",
     titleEn: "Arrival & Departure Clearance",
+    slug: "ship-agency",
     description:
       "Pengurusan dokumen kedatangan dan keberangkatan kapal dari dan ke pelabuhan.",
     descriptionEn:
@@ -32,6 +33,7 @@ export const services = [
   {
     title: "Bill of Lading Arrangement",
     titleEn: "Bill of Lading Arrangement",
+    slug: "customs-clearance",
     description:
       "Pengurusan dan koordinasi dokumen bill of lading untuk kelancaran perdagangan laut Anda.",
     descriptionEn:
@@ -41,6 +43,7 @@ export const services = [
   {
     title: "Port Call Information",
     titleEn: "Port Call Information",
+    slug: "ship-agency",
     description:
       "Penyediaan informasi lengkap terkait jadwal dan kondisi panggilan pelabuhan.",
     descriptionEn:
@@ -50,6 +53,7 @@ export const services = [
   {
     title: "Offshore Support",
     titleEn: "Offshore Support",
+    slug: "offshore-support",
     description:
       "Dukungan operasi lepas pantai termasuk supply vessel dan maintenance offshore.",
     descriptionEn:
@@ -59,6 +63,7 @@ export const services = [
   {
     title: "Ship-to-Ship Transhipment",
     titleEn: "Ship-to-Ship Transhipment",
+    slug: "offshore-support",
     description:
       "Koordinasi dan pengurusan dokumen untuk operasi pemindahan kargo antar kapal.",
     descriptionEn:
@@ -68,6 +73,7 @@ export const services = [
   {
     title: "Dry-Docking & New Building Support",
     titleEn: "Dry-Docking & New Building Support",
+    slug: "offshore-support",
     description:
       "Dukungan teknis dan dokumen untuk perawatan kapal di galangan kapal serta pembangunan baru.",
     descriptionEn:
@@ -95,6 +101,7 @@ export const services = [
   {
     title: "Logistics, Forwarding & Customs Clearance",
     titleEn: "Logistics, Forwarding & Customs Clearance",
+    slug: "logistics-forwarding",
     description:
       "Solusi logistik laut dan darat yang terintegrasi termasuk pengurusan bea cukai.",
     descriptionEn:
@@ -104,6 +111,7 @@ export const services = [
   {
     title: "Ship / Rig Lay Up",
     titleEn: "Ship / Rig Lay Up",
+    slug: "offshore-support",
     description:
       "Dukungan dan pengurusan dokumen untuk penarikan sementara kapal atau rig dari operasional.",
     descriptionEn:
@@ -113,6 +121,7 @@ export const services = [
   {
     title: "Ship Chandler & Bunkering",
     titleEn: "Ship Chandler & Bunkering",
+    slug: "ship-chandler",
     description:
       "Penyediaan kebutuhan kapal dan pengisian bahan bakar berkualitas dengan harga kompetitif.",
     descriptionEn:
@@ -122,6 +131,7 @@ export const services = [
   {
     title: "Vessel / Cargo Pre-Planning",
     titleEn: "Vessel / Cargo Pre-Planning",
+    slug: "ship-agency",
     description:
       "Perencanaan awal kunjungan kapal dan kargo untuk memastikan kelancaran operasional di pelabuhan.",
     descriptionEn:
@@ -131,6 +141,7 @@ export const services = [
   {
     title: "Owner Protective Agency",
     titleEn: "Owner Protective Agency (OPA)",
+    slug: "ship-agency",
     description:
       "Layanan agen perlindungan pemilik kapal untuk memastikan kepentingan dan aset terlindungi selama operasi.",
     descriptionEn:
@@ -149,6 +160,7 @@ export const services = [
   {
     title: "Husbandry Services",
     titleEn: "Husbandry Services",
+    slug: "crew-manning",
     description:
       "Crew change, e-Visa, akomodasi, transportasi, dan seluruh kebutuhan logistik awak kapal selama sandar di pelabuhan.",
     descriptionEn:
@@ -158,6 +170,7 @@ export const services = [
   {
     title: "Crew Manning",
     titleEn: "Crew Manning & Management",
+    slug: "crew-manning",
     description:
       "Penyediaan awak kapal terlatih dan bersertifikat untuk kebutuhan operasional Anda.",
     descriptionEn:
@@ -176,6 +189,7 @@ export const services = [
   {
     title: "Medical Evacuation",
     titleEn: "Medical Evacuation (Medevac)",
+    slug: "crew-manning",
     description:
       "Layanan evakuasi medis darurat untuk awak kapal yang membutuhkan pertolongan segera.",
     descriptionEn:

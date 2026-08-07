@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 import Container from "@/components/layout/Container";
 import { company } from "@/constants/company";
+import { serviceLandings } from "@/data/serviceLandings";
 import logo from "@/assets/images/LOGO.png";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const servicesList = [
-    t?.services?.s1Title,
-    t?.services?.s2Title,
-    t?.services?.s3Title,
-    t?.services?.s4Title,
-    t?.services?.s5Title,
-    t?.services?.s6Title,
-  ].filter(Boolean);
+  const servicesList = serviceLandings.map((service) => ({
+    slug: service.slug,
+    title: service.title[language] || service.title.en,
+  }));
 
   const navigation = [
     { name: t?.nav?.home || "Beranda", href: "/" },
@@ -127,13 +124,13 @@ const Footer = () => {
               {t?.nav?.services || "Layanan"}
             </h3>
             <ul className="space-y-2.5">
-              {servicesList.map((service, index) => (
-                <li key={index}>
+              {servicesList.map((service) => (
+                <li key={service.slug}>
                   <Link
-                    to="/services"
+                    to={`/${service.slug}`}
                     className="inline-block text-sm text-slate-400 transition-all duration-200 hover:translate-x-1 hover:text-accent"
                   >
-                    {service}
+                    {service.title}
                   </Link>
                 </li>
               ))}

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Container from "@/components/layout/Container";
 import { services } from "@/data/services";
 import { useLanguage } from "@/context/LanguageContext";
@@ -59,44 +60,60 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-stretch">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id || service.title || index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.6,
-                delay: 0.1 * index,
-                ease: [0.21, 0.47, 0.32, 0.98],
-              }}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:border-secondary/40 hover:shadow-xl hover:shadow-secondary/5"
-            >
-              <div>
-                {/* Icon Container */}
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-slate-100 text-secondary transition-all duration-300 group-hover:bg-secondary group-hover:text-white group-hover:scale-105">
-                  <service.icon className="h-7 w-7 transition-colors" />
+          {services.map((service, index) => {
+            const card = (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.1 * index,
+                  ease: [0.21, 0.47, 0.32, 0.98],
+                }}
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:border-secondary/40 hover:shadow-xl hover:shadow-secondary/5"
+              >
+                <div>
+                  {/* Icon Container */}
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-slate-100 text-secondary transition-all duration-300 group-hover:bg-secondary group-hover:text-white group-hover:scale-105">
+                    <service.icon className="h-7 w-7 transition-colors" />
+                  </div>
+
+                  {/* Service Title */}
+                  <h3 className="mb-3 text-lg font-bold text-primary group-hover:text-secondary transition-colors leading-snug">
+                    {language === "id"
+                      ? service.title
+                      : service.titleEn || service.title}
+                  </h3>
+
+                  {/* Service Description */}
+                  <p className="text-sm leading-relaxed text-slate-500">
+                    {language === "id"
+                      ? service.description
+                      : service.descriptionEn || service.description}
+                  </p>
                 </div>
 
-                {/* Service Title */}
-                <h3 className="mb-3 text-lg font-bold text-primary group-hover:text-secondary transition-colors leading-snug">
-                  {language === "id"
-                    ? service.title
-                    : service.titleEn || service.title}
-                </h3>
+                {/* Bottom Gradient Accent Bar (SUDAH DIBERSIHKAN KE bg-linear-to-r) */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-secondary to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </motion.div>
+            );
 
-                {/* Service Description */}
-                <p className="text-sm leading-relaxed text-slate-500">
-                  {language === "id"
-                    ? service.description
-                    : service.descriptionEn || service.description}
-                </p>
-              </div>
+            if (!service.slug) {
+              return <div key={service.title || index}>{card}</div>;
+            }
 
-              {/* Bottom Gradient Accent Bar (SUDAH DIBERSIHKAN KE bg-linear-to-r) */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-secondary to-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </motion.div>
-          ))}
+            return (
+              <Link
+                key={service.title || index}
+                to={`/${service.slug}`}
+                aria-label={language === "id" ? service.title : service.titleEn || service.title}
+                className="block h-full"
+              >
+                {card}
+              </Link>
+            );
+          })}
         </div>
       </Container>
     </section>

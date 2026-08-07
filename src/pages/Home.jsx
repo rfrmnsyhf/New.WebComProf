@@ -108,11 +108,11 @@ const Home = () => {
   ];
 
   const featuredServices = [
-    { id: "svc-1", image: svc1, title: t?.services?.s1Title, description: t?.services?.s1Desc },
-    { id: "svc-2", image: svc2, title: t?.services?.s2Title, description: t?.services?.s2Desc },
-    { id: "svc-3", image: svc3, title: t?.services?.s3Title, description: t?.services?.s3Desc },
-    { id: "svc-4", image: svc4, title: t?.services?.s4Title, description: t?.services?.s4Desc },
-    { id: "svc-5", image: svc5, title: t?.services?.s5Title, description: t?.services?.s5Desc },
+    { id: "svc-1", slug: "ship-agency", image: svc1, title: t?.services?.s1Title, description: t?.services?.s1Desc },
+    { id: "svc-2", slug: "ship-chandler", image: svc2, title: t?.services?.s2Title, description: t?.services?.s2Desc },
+    { id: "svc-3", slug: "logistics-forwarding", image: svc3, title: t?.services?.s3Title, description: t?.services?.s3Desc },
+    { id: "svc-4", slug: "offshore-support", image: svc4, title: t?.services?.s4Title, description: t?.services?.s4Desc },
+    { id: "svc-5", slug: "crew-manning", image: svc5, title: t?.services?.s5Title, description: t?.services?.s5Desc },
   ];
 
   return (
@@ -357,10 +357,10 @@ const Home = () => {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((service, index) => (
-              <motion.div
+            {featuredServices.map((service) => (
+              <Link
                 key={service.id}
-                {...fadeUp(0.1 * index)}
+                to={`/${service.slug}`}
                 className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-secondary/30 hover:shadow-xl"
               >
                 <div>
@@ -381,15 +381,12 @@ const Home = () => {
                 </div>
 
                 <div className="p-6 pt-0">
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-all duration-300 hover:gap-3"
-                  >
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-all duration-300 group-hover:gap-3">
                     {language === "id" ? "Selengkapnya" : "Read More"}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
                 </div>
-              </motion.div>
+              </Link>
             ))}
           </div>
 
