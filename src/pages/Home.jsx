@@ -12,9 +12,11 @@ import svc2 from "@/assets/images/svc2.jpg";
 import svc3 from "@/assets/images/svc3.jpg";
 import svc4 from "@/assets/images/svc4.jpg";
 import svc5 from "@/assets/images/svc5.jpg";
+import servicesHero from "@/assets/images/servicesHero.jpg";
 import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
 import CertificationsSection from "@/sections/Certifications/Certifications";
+import TrustStats from "@/components/common/TrustStats";
 import SchemaOrg from "@/components/seo/SchemaOrg";
 import { localBusinessSchema } from "@/data/schemas";
 import { useLanguage } from "@/context/LanguageContext";
@@ -147,14 +149,15 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-primary">
         <div className="absolute inset-0 overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-            src="/LAUTJAYAV2.mov"
+          <img
+            src={servicesHero}
+            alt={
+              language === "id"
+                ? "Kapal berlabuh di Pelabuhan Batam"
+                : "Vessel calling at Batam Port"
+            }
+            fetchPriority="high"
+            loading="eager"
             className="absolute inset-0 h-full w-full object-cover pointer-events-none"
           />
         </div>
@@ -215,6 +218,8 @@ const Home = () => {
 
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none" />
       </section>
+
+      <TrustStats />
 
       {/* Value Proposition */}
       <section className="bg-white py-20 lg:py-28">
