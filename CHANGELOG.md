@@ -28,6 +28,7 @@ Semua commit di bawah berurutan dan sudah melewati `npm run build` (sukses) sert
 | Hash | Commit | Isi |
 |------|--------|-----|
 | `3773a81` | `fix(home): restore client-approved hero video and retain SEO enhancements` | Hero Home kembali memakai `LAUTJAYAV2.mov` (keputusan: jangan ubah tampilan yang sudah disetujui client tanpa komunikasi). `TrustStats` strip, seluruh layout, CTA, metadata, dan struktur SEO **tetap dipertahankan**. Optimasi media (konversi MOV → MP4/WebM) menjadi backlog berbasis data — lihat `docs/seo-roadmap.md`. |
+| `7bf0258` | `perf(media): compress hero video for faster loading` | Kompresi aset hero `public/LAUTJAYAV2.mov`: `3816387 B → 2210968 B`. Tetap `.mov` H.264 (`avc1`) + AAC (`mp4a`), perilaku aplikasi tidak berubah — hero tetap mereferensikan `/LAUTJAYAV2.mov`. Tidak ada perubahan pada React/SEO. |
 
 ## Sebelum Sprint 1
 
