@@ -129,7 +129,24 @@ export const serviceLandings = [
       id: "PT. Chantika Bahari Sejahtera Abadi (CBSA) adalah ship agent independen di Batam yang berpengalaman menangani seluruh formalitas pelabuhan dan regulasi untuk semua jenis kapal yang bersandar di Batam Port. Tim kami menjamin port call yang bebas hambatan dan cepat di bawah keagenan kami.",
       en: "PT. Chantika Bahari Sejahtera Abadi (CBSA) is an independent ship agency in Batam experienced in handling all port and regulatory formalities for every type of vessel calling at Batam Port. Our team guarantees a fuss-free and swift port call under our agency.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "PT. Chantika Bahari Sejahtera Abadi (CBSA) adalah penyedia jasa kepelabuhanan dan shipping independen yang berbasis di Batam, Indonesia. Sebagai ship agent, kami bertindak sebagai perwakilan resmi kapal selama port call — menangani seluruh formalitas pelabuhan dan regulasi untuk semua jenis kapal yang bersandar di Batam Port dan perairan Kepulauan Riau.",
+        en: "PT. Chantika Bahari Sejahtera Abadi (CBSA) is an independent port and shipping services provider based in Batam, Indonesia. As a ship agent, we act as the vessel's official representative throughout the port call — handling all port and regulatory formalities for every type of vessel calling at Batam Port and the waters of the Riau Islands.",
+      },
+      {
+        id: "Tim kami berpengalaman menangani keagenan untuk berbagai kategori kapal — termasuk break-bulk, dry bulk, chemical tanker, crude & product tanker, container ship, heavy lift, tug & barge, oil & gas support, reefer, cruise, hingga naval vessels. Kami mengoordinasikan formalitas CIQP (Syahbandar, Bea Cukai, Imigrasi, dan Karantina) serta kebutuhan husbandry selama kapal berada di pelabuhan maupun anchorage.",
+        en: "Our team is experienced in acting for a wide range of vessel categories — including break-bulk, dry bulk, chemical tankers, crude & product tankers, container ships, heavy lift, tug & barge, oil & gas support, reefers, cruise, and naval vessels. We coordinate CIQP formalities (Port Authority, Customs, Immigration, and Quarantine) and husbandry needs while the vessel is at berth or anchorage.",
+      },
+      {
+        id: "Layanan keagenan kami juga mencakup dukungan Owner Protective Agency (OPA) untuk melindungi kepentingan pemilik kapal, koordinasi surveyor untuk inspeksi kapal dan kargo, pengawasan port captain & stevedores untuk percepatan bongkar muat, serta koordinasi operasi ship-to-ship transshipment di lokasi yang aman.",
+        en: "Our agency services also include Owner Protective Agency (OPA) support to safeguard owner interests, surveyor coordination for vessel and cargo inspections, port captain & stevedore supervision for faster cargo turnaround, and coordination of ship-to-ship transshipment operations at safe locations.",
+      },
+      {
+        id: "Dengan komitmen terhadap Health, Safety, and Environment (HSE) serta dukungan operasional 24/7, CBSA menjamin port call yang bebas hambatan, transparan, dan efisien. Kami melayani pemilik kapal, ship manager, charterer, operator, pemasok, trader, dan penerima barang — membantu memastikan setiap pelayaran Anda aman dan lancar.",
+        en: "With a strong commitment to Health, Safety, and Environment (HSE) and 24/7 operational support, CBSA guarantees a fuss-free, transparent, and efficient port call. We serve ship owners, ship managers, charterers, operators, suppliers, traders, and receivers — helping to make every voyage safe and smooth.",
+      },
+    ],
     features: [
       {
         title: { id: "Arrival & Departure Clearance", en: "Arrival & Departure Clearance" },
@@ -307,7 +324,24 @@ export const serviceLandings = [
       id: "Sebagai ship chandler di Batam, CBSA memasok seluruh kebutuhan kapal — dari provisi segar, suku cadang mesin, deck stores, hingga air bersih — dan mengirimkannya langsung ke kapal Anda, baik di dermaga maupun di anchorage. Layanan chandler kami adalah bagian dari layanan terintegrasi untuk memastikan kapal tetap siap berlayar.",
       en: "As a ship chandler in Batam, CBSA supplies all vessel needs — from fresh provisions, engine spares, deck stores, to fresh water — and delivers them directly to your vessel, whether at berth or anchorage. Our chandler services are part of an integrated offering that keeps your vessel voyage-ready.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "Sebagai ship chandler di Batam, CBSA memasok kebutuhan lengkap kapal — provisi segar, dry goods, suku cadang mesin, deck stores, engine stores, air bersih, hingga koordinasi bunkering. Layanan ini merupakan bagian dari portofolio terintegrasi yang memastikan kapal Anda selalu siap berlayar.",
+        en: "As a ship chandler in Batam, CBSA supplies the full range of vessel needs — fresh provisions, dry goods, engine spare parts, deck stores, engine stores, fresh water, and bunkering coordination. This service is part of an integrated portfolio that keeps your vessel voyage-ready.",
+      },
+      {
+        id: "Kami memahami bahwa setiap kapal memiliki kebutuhan yang unik. Tim kami bekerja dari daftar kebutuhan yang Anda kirimkan, menyusun penawaran yang kompetitif dan transparan, lalu mengelola pengadaan dan pengiriman langsung ke kapal — baik di dermaga Batu Ampar, Sekupang, Kabil, maupun di anchorage sekitar Batam.",
+        en: "We understand that every vessel has unique requirements. Our team works from the requirement list you submit, prepares competitive and transparent quotations, then manages sourcing and direct delivery to your vessel — whether at the berths of Batu Ampar, Sekupang, Kabil, or at anchorages around Batam.",
+      },
+      {
+        id: "Jaringan pemasok lokal yang luas memungkinkan kami memenuhi kebutuhan provisi segar dan suku cadang dengan cepat, termasuk pengadaan darurat berprioritas tinggi. Seluruh pasokan dikemas sesuai ketentuan kapal dan disertai dokumen yang lengkap.",
+        en: "An extensive local supplier network allows us to meet fresh provision and spare part requirements quickly, including high-priority urgent sourcing. All supplies are packed to vessel requirements and delivered with complete documentation.",
+      },
+      {
+        id: "Tim chandler kami siaga 24/7, sehingga kapan pun kapal Anda membutuhkan perbekalan di Batam — dari kebutuhan rutin hingga pengiriman darurat — kami siap merespons dengan cepat dan andal.",
+        en: "Our chandler team is on standby 24/7, so whenever your vessel needs supplies in Batam — from routine requirements to emergency deliveries — we are ready to respond quickly and reliably.",
+      },
+    ],
     features: [
       {
         title: { id: "Provisi & Perbekalan (Provision)", en: "Provision Supply" },
@@ -478,7 +512,24 @@ export const serviceLandings = [
       id: "CBSA menyediakan layanan marine supply yang mencakup pengadaan dan pengelolaan rantai pasok untuk kapal, rig, dan operasi lepas pantai. Kami mengelola koordinasi pemasok, kualitas barang, dan pengiriman tepat waktu sehingga kebutuhan kapal Anda selalu terpenuhi.",
       en: "CBSA provides marine supply services covering sourcing and supply chain management for vessels, rigs, and offshore operations. We manage supplier coordination, product quality, and on-time delivery so your vessel needs are always met.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "Layanan marine supply CBSA mencakup pengadaan dan pengelolaan rantai pasok untuk kapal, rig, dan operasi lepas pantai. Kami mengoordinasikan pemasok lokal dan internasional, memeriksa kualitas barang, dan memastikan pengiriman tepat waktu ke dermaga, anchorage, maupun lokasi offshore di sekitar Kepulauan Riau.",
+        en: "CBSA's marine supply service covers sourcing and supply chain management for vessels, rigs, and offshore operations. We coordinate local and international suppliers, inspect product quality, and ensure on-time delivery to berths, anchorages, or offshore locations around the Riau Islands.",
+      },
+      {
+        id: "Sebagai bagian dari portofolio layanan yang terintegrasi, marine supply kami melengkapi ship chandler, keagenan kapal, dan layanan logistik — memberikan solusi satu pintu bagi seluruh kebutuhan pengadaan kapal di Batam dan sekitarnya.",
+        en: "As part of our integrated service portfolio, our marine supply complements ship chandler, ship agency, and logistics services — providing a one-stop solution for all vessel procurement needs in Batam and beyond.",
+      },
+      {
+        id: "Berlokasi di jalur pelayaran tersibuk antara Selat Malaka dan Selat Singapura, Batam memungkinkan pengadaan yang efisien dengan harga yang kompetitif dan transit yang cepat bagi kapal yang melintas.",
+        en: "Located on one of the busiest shipping lanes between the Malacca Strait and the Singapore Strait, Batam enables efficient sourcing with competitive pricing and rapid turnaround for transiting vessels.",
+      },
+      {
+        id: "Kami melayani pemilik kapal, ship manager, charterer, operator, dan perusahaan minyak & gas — termasuk distribusi spare part untuk kapal yang sedang beroperasi. Setiap kiriman dipantau dari pemasok hingga tiba di kapal Anda.",
+        en: "We serve ship owners, ship managers, charterers, operators, and oil & gas companies — including spare parts distribution for vessels in operation. Every shipment is tracked from supplier to vessel delivery.",
+      },
+    ],
     features: [
       {
         title: { id: "Pengadaan Barang", en: "Goods Sourcing" },
@@ -642,7 +693,24 @@ export const serviceLandings = [
       id: "CBSA mengoordinasikan pasokan bunker fuel untuk kapal Anda di Batam, bekerja sama dengan pemasok bahan bakar berlisensi. Kami mengelola verifikasi kuantitas dan kualitas, koordinasi dengan surveyor, serta dokumentasi lengkap untuk memastikan proses bunkering yang transparan dan efisien.",
       en: "CBSA coordinates bunker fuel supply for your vessel in Batam, working with licensed fuel suppliers. We manage quantity and quality verification, surveyor coordination, and complete documentation to ensure a transparent and efficient bunkering process.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "CBSA mengoordinasikan pasokan bunker fuel di Batam bekerja sama dengan pemasok bahan bakar berlisensi. Kami menangani verifikasi kuantitas dan kualitas, koordinasi surveyor independen, serta dokumentasi lengkap termasuk Bunker Delivery Note (BDN) untuk memastikan proses bunkering yang transparan dan efisien.",
+        en: "CBSA coordinates bunker fuel supply in Batam working with licensed fuel suppliers. We handle quantity and quality verification, independent surveyor coordination, and complete documentation including the Bunker Delivery Note (BDN) to ensure a transparent and efficient bunkering process.",
+      },
+      {
+        id: "Bunkering di Batam menjadi pilihan yang efisien bagi kapal yang melintas Selat Singapura dan tidak perlu masuk pelabuhan Singapura. Anchorage strategis di sekitar Batam mendukung operasi pengisian bahan bakar yang aman dan sesuai regulasi, termasuk dukungan ship-to-ship (STS) transfer.",
+        en: "Bunkering in Batam is an efficient option for vessels transiting the Singapore Strait that do not need to enter Singapore port. Strategic anchorages around Batam support safe, regulation-compliant fuel transfer operations, including ship-to-ship (STS) transfer support.",
+      },
+      {
+        id: "Layanan ini dapat digabungkan dengan clearance, chandler, dan layanan lain dalam satu port call, sehingga mengurangi waktu tunggu dan biaya operasional kapal Anda.",
+        en: "This service can be combined with clearance, chandler, and other services in a single port call, reducing vessel waiting time and operating costs.",
+      },
+      {
+        id: "Tim operasional kami siaga 24/7 untuk menangani permintaan bunkering kapan pun kapal Anda tiba di perairan Batam — dengan perhitungan kuantitas yang akurat dan pelaporan yang jelas kepada principal.",
+        en: "Our operational team is on standby 24/7 to handle bunkering requests whenever your vessel arrives in Batam waters — with accurate quantity computation and clear reporting to the principal.",
+      },
+    ],
     features: [
       {
         title: { id: "Koordinasi Pemasok", en: "Supplier Coordination" },
@@ -797,7 +865,7 @@ export const serviceLandings = [
     },
     image: svc5,
     serving: servingAreas,
-    related: ["ship-agency", "customs-clearance", "medical"],
+    related: ["ship-agency", "customs-clearance", "offshore-support"],
     ctaTitle: {
       id: "Butuh Layanan Crew di Batam?",
       en: "Need Crew Services in Batam?",
@@ -806,7 +874,24 @@ export const serviceLandings = [
       id: "CBSA menyediakan layanan husbandry menyeluruh dan crew manning untuk kapal yang bersandar di Batam. Kami menangani pergantian kru (sign-on/sign-off), pengurusan e-Visa dan Letter of Guarantee (LOG), transportasi, akomodasi hotel, pengawalan medis, hingga perekrutan awak kapal bersertifikat.",
       en: "CBSA provides comprehensive husbandry and crew manning services for vessels calling at Batam. We handle crew changes (sign-on/sign-off), e-Visa and Letter of Guarantee (LOG) issuance, transportation, hotel accommodation, medical escorts, and certified seafarer recruitment.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "CBSA menyediakan layanan husbandry menyeluruh dan crew manning untuk kapal yang bersandar di Batam. Kami menangani pergantian awak kapal (sign-on/sign-off), pengurusan e-Visa dan Letter of Guarantee (LOG), serta izin imigrasi untuk awak kapal asing.",
+        en: "CBSA provides comprehensive husbandry and crew manning services for vessels calling at Batam. We handle crew changes (sign-on/sign-off), e-Visa and Letter of Guarantee (LOG) issuance, and immigration permits for foreign crew members.",
+      },
+      {
+        id: "Di luar pengurusan dokumen, kami mengelola transportasi bandara/pelabuhan, akomodasi hotel, dan kebutuhan darat awak kapal. Pengawalan medis serta koordinasi rumah sakit tersedia untuk kebutuhan kesehatan dan evakuasi darurat awak kapal.",
+        en: "Beyond documentation, we manage airport/port transfers, hotel accommodation, and crew shore needs. Medical escorts and hospital coordination are available for crew health needs and emergency evacuations.",
+      },
+      {
+        id: "Untuk perekrutan, kami melakukan seleksi dan pengelolaan sertifikasi awak kapal sesuai standar STCW internasional — mendukung pemilik kapal dan ship manager yang membutuhkan awak kapal yang kompeten dan tersertifikasi.",
+        en: "For recruitment, we conduct selection and certification management of seafarers to international STCW standards — supporting ship owners and ship managers who need competent, certified crew.",
+      },
+      {
+        id: "Batam adalah titik pergantian kru yang efisien bagi kapal di Selat Singapura, berkat akses Bandara Hang Nadim yang terhubung langsung dengan Singapura dan Malaysia. Pengalaman koordinasi imigrasi kami mempercepat seluruh proses crew change.",
+        en: "Batam is an efficient crew change point for vessels in the Singapore Strait, thanks to Hang Nadim Airport's direct connections with Singapore and Malaysia. Our experienced immigration coordination speeds up the entire crew change process.",
+      },
+    ],
     features: [
       {
         title: { id: "Crew Change", en: "Crew Change" },
@@ -977,7 +1062,24 @@ export const serviceLandings = [
       id: "CBSA menangani seluruh pengurusan clearance kapal di Batam, termasuk koordinasi dengan Syahbandar (KSOP), Bea Cukai, Imigrasi, dan Karantina. Tim kami berpengalaman mengelola formalitas CIQP untuk kapal asing dan domestik sehingga port call berjalan lancar dan patuh regulasi.",
       en: "CBSA handles all vessel clearance processing in Batam, including coordination with Port Authority (KSOP), Customs, Immigration, and Quarantine. Our experienced team manages CIQP formalities for foreign and domestic vessels so port calls run smoothly and compliantly.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "CBSA menangani seluruh pengurusan clearance kapal di Batam — koordinasi dengan Syahbandar (KSOP), Bea Cukai, Imigrasi, dan Karantina. Tim kami berpengalaman mengelola formalitas CIQP untuk kapal asing dan domestik sehingga port call berjalan lancar dan patuh regulasi.",
+        en: "CBSA handles all vessel clearance processing in Batam — coordinating with Port Authority (KSOP), Customs, Immigration, and Quarantine. Our experienced team manages CIQP formalities for foreign and domestic vessels so port calls run smoothly and compliantly.",
+      },
+      {
+        id: "Layanan meliputi arrival/departure clearance, pengurusan dokumen bea cukai, koordinasi bill of lading, pengaturan surveyor untuk inspeksi kapal dan kargo, serta penyelesaian pemeriksaan dengan otoritas pelabuhan.",
+        en: "Services include arrival/departure clearance, customs documentation, Bill of Lading coordination, arranging surveyors for vessel and cargo inspections, and completion of inspections with port authorities.",
+      },
+      {
+        id: "Proses clearance biasanya diselesaikan dalam 1-2 hari kerja tergantung kelengkapan dokumen manifes dan sertifikat kapal. Pemahaman mendalam terhadap prosedur lokal mempercepat setiap tahapan pengurusan.",
+        en: "Clearance is typically completed within 1-2 working days depending on the completeness of manifest documents and vessel certificates. Deep knowledge of local procedures speeds up every stage of processing.",
+      },
+      {
+        id: "Layanan clearance terintegrasi dengan keagenan kapal, husbandry, dan logistik dalam satu koordinasi — memastikan port call yang patuh regulasi, transparan, dan efisien untuk semua jenis kapal.",
+        en: "Clearance services are integrated with ship agency, husbandry, and logistics under one coordination — ensuring compliant, transparent, and efficient port calls for all vessel types.",
+      },
+    ],
     features: [
       {
         title: { id: "Arrival / Departure Clearance", en: "Arrival / Departure Clearance" },
@@ -1148,7 +1250,24 @@ export const serviceLandings = [
       id: "CBSA menyediakan dukungan operasional lepas pantai termasuk koordinasi kapal pendukung (OSV), logistik offshore, dan pengurusan dokumen. Kami juga mendukung kegiatan ship-to-ship transshipment, rig lay-up, dan dry-docking/new building di galangan sekitar Batam.",
       en: "CBSA provides offshore operational support including support vessel (OSV) coordination, offshore logistics, and document processing. We also support ship-to-ship transshipment, rig lay-up, and dry-docking/new building at shipyards around Batam.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "CBSA menyediakan dukungan operasional lepas pantai termasuk koordinasi kapal pendukung (OSV), logistik offshore, dan pengurusan dokumen untuk instalasi serta operasi minyak & gas. Tim kami berpengalaman menangani kapal kategori oil & gas support.",
+        en: "CBSA provides offshore operational support including offshore support vessel (OSV) coordination, offshore logistics, and document processing for oil & gas installations and operations. Our team is experienced in handling oil & gas support vessel categories.",
+      },
+      {
+        id: "Kami juga mendukung kegiatan ship-to-ship transshipment, rig lay-up dan ship lay-up termasuk pengurusan izin anchorage, serta dry-docking dan new building di galangan kapal sekitar Batam dengan dukungan dokumen dan teknis.",
+        en: "We also support ship-to-ship transshipment, rig and vessel lay-up including anchorage permits, as well as dry-docking and new building at shipyards around Batam with documentation and technical support.",
+      },
+      {
+        id: "Dengan lokasi yang dekat dengan wilayah operasi lepas pantai seperti Natuna dan sekitarnya, Batam menjadi basis logistik yang strategis untuk pengiriman pasokan ke instalasi offshore.",
+        en: "Located close to offshore operating areas such as Natuna and beyond, Batam is a strategic logistics base for supplying offshore installations.",
+      },
+      {
+        id: "Tim operasional 24/7 kami siap mendukung situasi darurat termasuk medevac dan pengiriman logistik mendesak ke lokasi lepas pantai, dengan pelaporan lengkap kepada principal di setiap tahap.",
+        en: "Our 24/7 operational team is ready to support emergencies including medevac and urgent logistics deliveries to offshore locations, with complete reporting to the principal at every stage.",
+      },
+    ],
     features: [
       {
         title: { id: "Koordinasi OSV", en: "OSV Coordination" },
@@ -1319,7 +1438,24 @@ export const serviceLandings = [
       id: "CBSA menyediakan layanan logistik, forwarding, dan pengurusan bea cukai yang terintegrasi. Kami menangani pengurusan kargo maritim, pergudangan, distribusi spare part kapal, dan koordinasi dokumen kargo sehingga rantai pasok Anda berjalan lancar dari pelabuhan hingga tujuan akhir.",
       en: "CBSA provides integrated logistics, forwarding, and customs handling services. We manage maritime cargo processing, warehousing, spare parts distribution, and cargo documentation coordination so your supply chain runs smoothly from port to final destination.",
     },
-    overview: [],
+    overview: [
+      {
+        id: "CBSA menyediakan layanan logistik, freight forwarding, dan pengurusan bea cukai yang terintegrasi. Kami menangani pengurusan kargo maritim, pergudangan, distribusi spare part, dan koordinasi dokumen kargo dari pelabuhan hingga tujuan akhir.",
+        en: "CBSA provides integrated logistics, freight forwarding, and customs handling services. We manage maritime cargo processing, warehousing, spare parts distribution, and cargo documentation coordination from port to final destination.",
+      },
+      {
+        id: "Layanan mencakup freight forwarding laut dan darat end-to-end, pengurusan bill of lading, deklarasi bea cukai, serta vessel/cargo pre-planning — perencanaan awal kunjungan kapal dan penanganan kargo untuk efisiensi operasional.",
+        en: "Services include end-to-end sea and land freight forwarding, Bill of Lading processing, customs declarations, and vessel/cargo pre-planning — proactive planning of vessel calls and cargo handling for operational efficiency.",
+      },
+      {
+        id: "Sebagai pintu masuk logistik utama Kepulauan Riau, Batam terhubung langsung dengan Singapura, Malaysia, dan pelabuhan utama Indonesia. Terminal peti kemas dan kargo di sekitar pelabuhan mendukung pengiriman door-to-door yang efisien.",
+        en: "As the main logistics gateway of the Riau Islands, Batam is directly connected to Singapore, Malaysia, and major Indonesian ports. Container and cargo terminals around the ports support efficient door-to-door deliveries.",
+      },
+      {
+        id: "Kami melayani pemilik kapal, trader, pemasok, dan penerima barang — memastikan rantai pasok berjalan lancar melalui koordinasi transportasi laut dan darat, pergudangan, dan pengurusan bea cukai dalam satu tim.",
+        en: "We serve ship owners, traders, suppliers, and receivers — ensuring smooth supply chains through coordinated sea and land transport, warehousing, and customs handling within one team.",
+      },
+    ],
     features: [
       {
         title: { id: "Freight Forwarding", en: "Freight Forwarding" },
