@@ -15,6 +15,8 @@ import svc5 from "@/assets/images/svc5.jpg";
 import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
 import CertificationsSection from "@/sections/Certifications/Certifications";
+import SchemaOrg from "@/components/seo/SchemaOrg";
+import { localBusinessSchema } from "@/data/schemas";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Hook reusable animation variants
@@ -141,6 +143,7 @@ const Home = () => {
           }
         />
       </Helmet>
+      <SchemaOrg data={localBusinessSchema} />
       {/* Hero Section */}
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-primary">
         <div className="absolute inset-0 overflow-hidden">

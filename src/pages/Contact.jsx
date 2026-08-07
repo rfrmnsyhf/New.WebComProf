@@ -3,11 +3,20 @@ import { Helmet } from "react-helmet-async";
 import FAQSection from "@/sections/Contact/FAQSection";
 import ContactSection from "@/sections/Contact/Contact";
 import BottomCTASection from "@/sections/BottomCTA/BottomCTA";
+import SchemaOrg from "@/components/seo/SchemaOrg";
+import FAQSchema from "@/components/seo/FAQSchema";
+import { localBusinessSchema, contactPointSchema } from "@/data/schemas";
+import { companyFaqs } from "@/data/companyFaqs";
 import contactHero from "@/assets/images/contactHero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Contact = () => {
   const { t, language } = useLanguage();
+
+  const faqItems = companyFaqs.map((faq) => ({
+    question: faq.question[language] || faq.question.en,
+    answer: faq.answer[language] || faq.answer.en,
+  }));
 
   return (
     <>
@@ -33,6 +42,8 @@ const Contact = () => {
           content="Reach CBSA's 24/7 operational team in Batam for all your maritime and shipping agency needs."
         />
       </Helmet>
+      <SchemaOrg data={[localBusinessSchema, contactPointSchema]} />
+      <FAQSchema faqs={faqItems} />
       <PageHero
         title={t.contact.title}
         subtitle={

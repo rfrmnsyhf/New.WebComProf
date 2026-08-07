@@ -4,6 +4,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
 import BackToTop from "@/components/common/BackToTop";
+import SchemaOrg from "@/components/seo/SchemaOrg";
+import { organizationSchema, websiteSchema } from "@/data/schemas";
 
 const Layout = () => {
   const { pathname } = useLocation();
@@ -20,7 +22,6 @@ const Layout = () => {
           content="CBSA adalah perusahaan independen di bidang jasa kepelabuhanan dan pelayaran. Ship agency, port services, dan maritime logistics di Batam, Indonesia."
         />
         <link rel="canonical" href="https://cbsabatam.com/" />
-        <meta name="keywords" content="CBSA, maritime, shipping agency, port services, logistics, Batam, Indonesia, bunkering, crew manning" />
         <meta property="og:site_name" content="CBSA | PT. Chantika Bahari Sejahtera Abadi" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="id_ID" />
@@ -28,6 +29,7 @@ const Layout = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://cbsabatam.com/og-image.jpg" />
       </Helmet>
+      <SchemaOrg data={[organizationSchema, websiteSchema]} />
       <Navbar />
       <main className="pt-20 print:pt-0">
         <Outlet />
