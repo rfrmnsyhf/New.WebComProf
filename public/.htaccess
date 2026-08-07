@@ -6,3 +6,15 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+# ==============================================
+# REDIRECT 301 (SEO) — nonaktif sementara
+# ==============================================
+# Aktifkan baris di bawah SETELAH URL baru terindex Google
+# (paling cepat 2-4 minggu setelah deploy + submit sitemap).
+# Jangan redirect ke URL yang belum pernah ada.
+#
+# Contoh:
+#   RewriteRule ^vessel-provision/?$ /logistics-forwarding [R=301,L]
+#   RewriteRule ^crew-change/?$ /crew-manning [R=301,L]
+

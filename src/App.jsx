@@ -11,6 +11,7 @@ import Contact from "@/pages/Contact";
 import Whatsapp from "@/pages/Whatsapp";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsConditions from "@/pages/TermsConditions";
+import ServicePage from "@/pages/ServicePage";
 import NotFound from "@/pages/NotFound";
 import { LanguageProvider } from "@/context/LanguageContext";
 
@@ -41,6 +42,14 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/ship-agency" element={<ServicePage />} />
+                <Route path="/ship-chandler" element={<ServicePage />} />
+                <Route path="/marine-supply" element={<ServicePage />} />
+                <Route path="/bunkering" element={<ServicePage />} />
+                <Route path="/crew-manning" element={<ServicePage />} />
+                <Route path="/customs-clearance" element={<ServicePage />} />
+                <Route path="/offshore-support" element={<ServicePage />} />
+                <Route path="/logistics-forwarding" element={<ServicePage />} />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/whatsapp" element={<Whatsapp />} />
