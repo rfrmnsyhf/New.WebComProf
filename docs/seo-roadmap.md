@@ -44,18 +44,30 @@ belum dikerjakan dan menunggu keputusan user sebelum dieksekusi.
    - Buat mailbox domain (manual di cPanel), ganti email di `company.js`,
      `serviceLandings.js` CTA, schema ContactPoint.
 
+8. **Optimasi media hero (backlog berbasis data — bukan kondisi saat ini)**
+   - Saat ini Home tetap memakai video `LAUTJAYAV2.mov` (keputusan change management:
+     tampilan yang sudah disetujui client tidak diubah tanpa komunikasi).
+   - Evaluasi HANYA jika data produksi menunjukkan video menjadi masalah:
+     - PageSpeed Insights — LCP buruk karena video.
+     - Core Web Vitals di GSC — URL masuk kategori Poor / Needs Improvement.
+     - Analytics — video tidak memberi nilai engagement, hanya beban loading.
+   - Bila terbukti, yang diajukan ke client adalah **konversi MOV → MP4 (H.264) atau
+     WebM** dengan kualitas visual setara (bukan menghapus video), agar hampir tidak ada
+     perubahan visual. Semua rekomendasi didukung data, bukan opini.
+
 ## Fase C — Ekspansi (opsional, v2.0)
 
-8. **URL per bahasa** (hreflang) — roadmap v2.0. Saat ini bilingual via toggle JS
+9. **URL per bahasa** (hreflang) — roadmap v2.0. Saat ini bilingual via toggle JS
    (LanguageContext), URL tetap satu. Implementasi: `/id/...` & `/en/...` + `<link rel="alternate" hreflang>`.
-9. **Struktur folder konten** — pindah `serviceLandings.js` ke per-file markdown/JSON
-   agar konten bisa di-edit tanpa menyentuh kode (CMS ringan).
-10. **Local SEO** — tambah halaman/kanal "Areas" per area (Batu Ampar, Sekupang, Kabil,
+10. **Struktur folder konten** — pindah `serviceLandings.js` ke per-file markdown/JSON
+    agar konten bisa di-edit tanpa menyentuh kode (CMS ringan).
+11. **Local SEO** — tambah halaman/kanal "Areas" per area (Batu Ampar, Sekupang, Kabil,
     Tanjung Uncang) bila relevan; usahakan Google Business Profile konsisten dengan NAP.
 
 ## Aturan yang tetap berlaku
 
 - JANGAN mengarang statistik, klien, sertifikasi, atau tahun (sumber: company profile + website).
-- Jangan hapus `public/LAUTJAYAV2.mov` (diputuskan dipertahankan).
+- Jangan hapus atau ubah `public/LAUTJAYAV2.mov` (dipakai hero Home; perubahan media hanya
+  via konversi MP4/WebM berbasis data, lihat Fase B).
 - Redirect 301 hanya diaktifkan setelah URL baru terindex.
 - Setiap perubahan besar → buat commit terpisah + build + lint.

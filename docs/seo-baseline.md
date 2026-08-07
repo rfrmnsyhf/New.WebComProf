@@ -64,9 +64,9 @@ Konten: min 600 / target 800 / maks ±1200 kata per halaman (ID+EN gabungan).
 
 ## 6. Homepage
 
-- Hero: `<video>` → `<img>` (LCP dioptimalkan, `fetchPriority="high"`).
-- Strip USP 4 klaim tanpa angka (24/7 Operations, Fast Response, Experienced Team, Serving Indonesian Waters).
-- File `public/LAUTJAYAV2.mov` tetap tersimpan (tidak dihapus), tidak lagi direferensikan.
+- Hero tetap memakai video `public/LAUTJAYAV2.mov` (keputusan change management: jangan ubah tampilan yang sudah disetujui client). File video direferensikan langsung (`src="/LAUTJAYAV2.mov"`).
+- Strip USP 4 klaim tanpa angka (24/7 Operations, Fast Response, Experienced Team, Serving Indonesian Waters) — `TrustStats` dipertahankan di Home.
+- Optimasi media hero (konversi MOV → MP4/WebM) adalah backlog berbasis data, bukan kondisi saat ini — lihat `docs/seo-roadmap.md`.
 
 ## 7. Kontak resmi (dipakai schema & website)
 

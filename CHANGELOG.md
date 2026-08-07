@@ -18,10 +18,16 @@ Semua commit di bawah berurutan dan sudah melewati `npm run build` (sukses) sert
 | 4 | `0fb9bb3` | `feat(content): add per-service landing content from company profile` | Isi `overview[]` tiap halaman (ID+EN, total 600–1200 kata/halaman) dari company profile + website. Perbaiki slug related `"medical"` → `"offshore-support"`. |
 | 5 | `2f5e059` | `feat(routing): add service routes, sitemap URLs, and redirect infra` | 8 route di `App.jsx`, `sitemap.xml` 16 URL, `src/config/redirects.js` (array kosong + dokumentasi), blok RewriteRule 301 dinonaktifkan di `.htaccess`. |
 | 6 | `4cc4f22` | `feat(internal-links): link footer, hub cards, and home features to service pages` | Footer 8 link halaman layanan, kartu hub `/services` (14 item dengan slug) jadi link, kartu featured Home (5) jadi link. |
-| 7 | `043d359` | `feat(home): replace hero video with image and add USP trust strip` | Hero `<video>` → `<img>` (LCP, fetchPriority high), tambah TrustStats strip. File `public/LAUTJAYAV2.mov` DIPERTAHANKAN. |
+| 7 | `043d359` | `feat(home): replace hero video with image and add USP trust strip` | Menambahkan TrustStats strip di Home + mengganti hero `<video>` → `<img>`. **Catatan**: perubahan media hero pada commit ini kemudian dikembalikan (lihat "Revisi Pasca-Sprint 1"); TrustStats strip tetap dipertahankan. |
 | 8 | docs ini | `docs(seo)` | CHANGELOG ini + `docs/seo-baseline.md`, `docs/seo-roadmap.md`, `docs/deployment-checklist.md`. |
 
 ---
+
+## Revisi Pasca-Sprint 1 (keputusan change management)
+
+| Hash | Commit | Isi |
+|------|--------|-----|
+| `3773a81` | `fix(home): restore client-approved hero video and retain SEO enhancements` | Hero Home kembali memakai `LAUTJAYAV2.mov` (keputusan: jangan ubah tampilan yang sudah disetujui client tanpa komunikasi). `TrustStats` strip, seluruh layout, CTA, metadata, dan struktur SEO **tetap dipertahankan**. Optimasi media (konversi MOV → MP4/WebM) menjadi backlog berbasis data — lihat `docs/seo-roadmap.md`. |
 
 ## Sebelum Sprint 1
 

@@ -14,7 +14,7 @@ Centang item yang relevan.
 ## 1. Verifikasi lokal sebelum deploy
 
 - [ ] `npm run preview` lalu buka manual:
-  - `/` hero image tampil (bukan video), strip USP terlihat
+  - `/` hero video (`LAUTJAYAV2.mov`) tampil dan berjalan, strip USP (TrustStats) terlihat
   - `/services` → 8 kartu hub bisa diklik
   - 8 halaman layanan render: `/ship-agency`, `/ship-chandler`, `/marine-supply`,
     `/bunkering`, `/crew-manning`, `/customs-clearance`, `/offshore-support`,
@@ -32,7 +32,7 @@ Centang item yang relevan.
 - [ ] Pastikan file `.htaccess` ikut ter-upload (SPA fallback ke `index.html`)
 - [ ] JANGAN aktifkan baris redirect 301 di `.htaccess` (masih dikomentari)
 - [ ] Cek semua aset (`.js`, `.css`, gambar) 200 di browser
-- [ ] File `LAUTJAYAV2.mov` boleh ikut ter-upload, tidak direferensikan (tidak wajib)
+- [ ] `public/LAUTJAYAV2.mov` **WAJIB ter-upload** — hero Home mereferensikan `src="/LAUTJAYAV2.mov"` (folder yang sama dengan `index.html`)
 
 ## 3. Google Search Console
 
@@ -58,6 +58,7 @@ Centang item yang relevan.
 - [ ] Pantau GSC: kueri, posisi, error indexing, CWV
 - [ ] Setelah URL baru terindex → aktifkan redirect 301 (lihat `docs/seo-roadmap.md`)
 - [ ] Buat mailbox email domain (manual) → ganti email di kontak + schema
+- [ ] Evaluasi hero video hanya jika data (PageSpeed LCP, CWV GSC, analytics) mendukung → konversi MOV → MP4/WebM (lihat `docs/seo-roadmap.md`)
 
 ## Kontak referensi
 
