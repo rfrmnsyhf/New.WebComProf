@@ -12,7 +12,6 @@ import svc2 from "@/assets/images/svc2.jpg";
 import svc3 from "@/assets/images/svc3.jpg";
 import svc4 from "@/assets/images/svc4.jpg";
 import svc5 from "@/assets/images/svc5.jpg";
-import servicesHero from "@/assets/images/servicesHero.jpg";
 import StatsSection from "@/sections/Stats/Stats";
 import IndustriesSection from "@/sections/Industries/Industries";
 import CertificationsSection from "@/sections/Certifications/Certifications";
@@ -149,15 +148,14 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-primary">
         <div className="absolute inset-0 overflow-hidden">
-          <img
-            src={servicesHero}
-            alt={
-              language === "id"
-                ? "Kapal berlabuh di Pelabuhan Batam"
-                : "Vessel calling at Batam Port"
-            }
-            fetchPriority="high"
-            loading="eager"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+            src="/LAUTJAYAV2.mov"
             className="absolute inset-0 h-full w-full object-cover pointer-events-none"
           />
         </div>
